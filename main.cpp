@@ -10,8 +10,8 @@ using namespace std;
 #define dbg cout;
 struct NetworkEdge {
   //int vertex;
-  ll from, to;
-  ll cap;
+  int from, to;
+  int cap;
   //int flow;
 };
 
@@ -20,25 +20,29 @@ struct NetworkVertex {
   bool visited;
 };
 
-#define MAX 1000
+//#define vertices 1000
 
 // EdmondKarp from ACM codebook
 struct Network {
   vector<NetworkEdge> edges;
-  vector<ll> ng[MAX]; // indexes of edges
-  ll back[MAX]; // indexes of edges for reconstructing augment path
-  bool fromS[MAX]; // for minCut: can get from s when augment not found?
+  vector<vector<int>> ng; // indexes of edges
+  vector<int> back; // indexes of edges for reconstructing augment path
+  vector<bool> fromS; // for minCut: can get from s when augment not found?
+  int vertices;
+  Network(int n): vertices(n), ng(vector<vector<int>>(n)), back(vector<int>(n)), fromS(vector<bool>(n)) {
 
-  void init(){
+  }
+
+  /*void init(){
     edges.clear();
-    for(int i = 0; i < MAX; ++ i){
+    for(int i = 0; i < vertices; ++ i){
       ng[i].clear();
       back[i] = 0;
       fromS[i] = false;
     }
-  }
+  }*/
 
-  void addEdge(ll from, ll to, ll capacity) { // 2 edges, back is residual, accessible by ^1 (even/odd)
+  void addEdge(int from, int to, int capacity) { // 2 edges, back is residual, accessible by ^1 (even/odd)
     //cout << "add: " << from << "->" << to << "; " << capacity << endl;
     ng[from].push_back(edges.size());
     edges.push_back(NetworkEdge{from, to, capacity});
@@ -47,16 +51,16 @@ struct Network {
     edges.push_back(NetworkEdge{to, from, 0});
   }
 
-  bool bfs(ll s, ll t) { // source,sink
-    for(int i = 0; i < MAX; ++ i) back[i] = -1;
+  bool bfs(int s, int t) { // source,sink
+    for(int i = 0; i < vertices; ++ i) back[i] = -1;
     back[s] = -2;
-    for(int i = 0; i < MAX; ++ i) fromS[i] = 0;
+    for(int i = 0; i < vertices; ++ i) fromS[i] = 0;
 
     //CL(back,-1); back[s] = -2;
     //CL(fromS,0);
-    queue<ll> q; q.push(s);
+    queue<int> q; q.push(s);
     while (!q.empty() && back[t] == -1) { // exists augment path to sink
-      ll u = q.front(); q.pop();
+      int u = q.front(); q.pop();
       fromS[u]=1;
       //F(ng[u].size()) {
       for(int i = 0; i < ng[u].size(); ++ i) {
@@ -70,11 +74,11 @@ struct Network {
     return back[t] != -1;
   }
 
-  ll maxFlow(ll s, ll t) {
-    ll maxFlow = 0;
+  int maxFlow(int s, int t) {
+    int maxFlow = 0;
     while (bfs(s, t)) {
       //cout << "found way" << endl;
-      ll flow = 1<<30, node = t; // from sink to source(=-2)
+      int flow = 1<<30, node = t; // from sink to source(=-2)
       // find size of the flow = min capacity on the way:
       while (back[node] != -2) {
         NetworkEdge & edge = edges[back[node]];
@@ -169,7 +173,7 @@ struct Graph {
   }
 
   // creates a list of graphs with all possible configurations of k guards
-  void iterateCombinations(int index, int free, vector<Graph*> & result, Graph* curVertex) {
+  void iterateCombinations(int index, int free, vector<Graph*> & result, Graph* curVertex, bool allowMultiple = true) {
     if (index == curVertex->size()) {
       if (free == 0) {
         /*cout << curVertex->vertices[0].guards << " ";
@@ -183,7 +187,9 @@ struct Graph {
     }
 
     // add i guards to the current vertices
-    for (int i = 0; i <= free; ++ i) {
+    const int maxGuards = allowMultiple ? free : 1;
+
+    for (int i = 0; i <= maxGuards; ++ i) {
       Graph* newVertex = new Graph(*curVertex);
       newVertex->vertices[index].guards = i;
       iterateCombinations(index + 1, free - i, result, newVertex);
@@ -192,8 +198,8 @@ struct Graph {
 
   // is one configuration passable to other by the rules of eternal domination
   bool oneMoveDistance(Graph & g, Graph & h, int k) {
-    Network net;
-    net.init();
+    Network net(g.size() + h.size() + 3);
+    //net.init();
     const int source = 0, sink = 1;
     int offset = 2;
     // create edges for all vertices in G
@@ -211,8 +217,14 @@ struct Graph {
     }
     // create edges between G and H
     for (int i = 0; i < g.vertices.size(); ++ i) {
+      if (!g.vertices[i].guards) continue;
+
+      // create edge to yourself
       net.addEdge(i + 2, i + g.vertices.size() + 2, 999);
-      for (int j = 0; j < g.vertices[i].edges.size(); ++j) {
+
+      for (int j = 0; j < g.vertices[i].edges.size(); ++) {
+        if (!h.vertices[ g.vertices[i].edges[j] ].guards) continue;
+
         // TODO: 999 -> Inf
         // cerr << "a" << endl;
         net.addEdge(i + 2, g.vertices[i].edges[j] + g.vertices.size() + 2, 999);
@@ -225,6 +237,7 @@ struct Graph {
   // Each vertice in the graph is one configuration
   Graph createConfigurationGraph(int k) {
     vector<Graph*> allConfigs;
+    cout << "iterating combinations..." << endl;
     iterateCombinations(0, k, allConfigs, new Graph(*this));
 
     Graph result;
@@ -232,16 +245,19 @@ struct Graph {
       result.vertices.push_back(GraphVertex(*i));
     }
 
+    cout << "creating edges..." << endl;
     // create edges between configurations
     for (int i = 0; i < result.size(); ++i) {
-      for (int j = 0; j < result.size(); ++ j) {
-        //cerr << "testing: " << i << ", " << j << endl;
-        if (oneMoveDistance(*allConfigs[i], *allConfigs[j], k)) {
+      for (int j = i; j < result.size(); ++ j) {
+        // you can always stay in the current state
+        if (i == j || oneMoveDistance(*allConfigs[i], *allConfigs[j], k)) {
           /*cout << "adding edge" << endl;
           allConfigs[i]->output();
           cout << "----" << endl;
           allConfigs[j]->output();*/
+          // the transition is always both ways
           result.vertices[i].edges.push_back(j);
+          result.vertices[j].edges.push_back(i);
         }
       }
     }
@@ -297,7 +313,9 @@ int main() {
   Graph configGraph;
   for (int i = 1; i < g.size() && !found; ++ i) {
     cout << "Testing k = " << i << "..." << endl;
+    cout << "creating config graph..." << endl;
     configGraph = g.createConfigurationGraph(i);
+    cout << "reducing..." << endl;
     configGraph.reduceToSafe();
     cout << "Possible states: " << configGraph.size() << endl;
     int safeStates = 0;
