@@ -22,6 +22,7 @@ struct NetworkVertex {
 
 #define MAX 1000
 
+// EdmondKarp from ACM codebook
 struct Network {
   vector<NetworkEdge> edges;
   vector<ll> ng[MAX]; // indexes of edges
@@ -295,13 +296,13 @@ int main() {
   int result;
   Graph configGraph;
   for (int i = 1; i < g.size() && !found; ++ i) {
-    cout << "Testing k = " << i << endl;
+    cout << "Testing k = " << i << "..." << endl;
     configGraph = g.createConfigurationGraph(i);
     configGraph.reduceToSafe();
     cout << "Possible states: " << configGraph.size() << endl;
     int safeStates = 0;
     bool found = false;
-    for (int j = 0; j < g.size(); ++j) {
+    for (int j = 0; j < configGraph.size(); ++j) {
       // at least one unremoved after reducing
       if (!configGraph.vertices[j].removed) {
         safeStates ++;
@@ -315,7 +316,7 @@ int main() {
     }
   }
 
-  cout << "k = " << result << endl;
+  cout << "ETERNAL DOMINATION NUMBER = " << result << endl;
   configGraph.outputAllUnremoved();
   return 0;
 }
