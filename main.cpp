@@ -2,7 +2,6 @@
 #include <vector>
 #include <queue>
 
-
 using ll=long long;
 
 using namespace std;
@@ -152,6 +151,22 @@ struct Graph {
     }
   }
 
+  bool isDominatingSet() {
+    vector<bool> dominated(vertices.size(), false);
+    for (int i = 0; i < vertices.size(); ++i) {
+      if (vertices[i].guards) {
+        dominated[i] = true;
+        for (int j = 0; j < vertices[i].edges.size(); ++j) {
+          dominated[ vertices[i].edges[j] ] = true;
+        }
+      }
+    }
+    for (int i = 0; i < vertices.size(); ++i) {
+      if (!dominated[i]) return false;
+    }
+    return true;
+  }
+
   // load undirected graph from stdin
   void loadFromStdin() {
     int n = 0;
@@ -173,9 +188,10 @@ struct Graph {
   }
 
   // creates a list of graphs with all possible configurations of k guards
+  // and keep only those, which are a dominating set
   void iterateCombinations(int index, int free, vector<Graph*> & result, Graph* curVertex, bool allowMultiple = true) {
     if (index == curVertex->size()) {
-      if (free == 0) {
+      if (free == 0 && curVertex->isDominatingSet()) {
         /*cout << curVertex->vertices[0].guards << " ";
         cout << curVertex->vertices[1].guards << " ";
         cout << curVertex->vertices[2].guards << endl;*/
@@ -222,7 +238,7 @@ struct Graph {
       // create edge to yourself
       net.addEdge(i + 2, i + g.vertices.size() + 2, 999);
 
-      for (int j = 0; j < g.vertices[i].edges.size(); ++) {
+      for (int j = 0; j < g.vertices[i].edges.size(); ++j) {
         if (!h.vertices[ g.vertices[i].edges[j] ].guards) continue;
 
         // TODO: 999 -> Inf
