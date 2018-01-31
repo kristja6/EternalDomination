@@ -2,7 +2,7 @@ PROGRAM=main
 CC=g++
 CFLAGS=-std=c++11
 
-all: compile
+all: compile drawing-compile
 
 run: compile
 	./main
@@ -15,4 +15,13 @@ valgrind: compile
 
 compile:
 	#gcc -O1 -Wall -Werror -std=c99 -lm -o main main.cpp -lm
-	g++ -std=c++11 -g -O4 -lm -o main main.cpp
+	g++ -std=c++11 -g -O4 -lm -o main main.h main.cpp
+
+drawing-compile:
+	mkdir -p states
+	g++ -std=c++11 -g -O4 -lm -o drawing main.h drawingTool.cpp
+
+draw:
+	touch ./states/junk
+	rm ./states/*
+	./drawing < drawing.in
