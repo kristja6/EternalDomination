@@ -1,6 +1,11 @@
 #include "arguments.h"
 
-Arguments::Arguments(int argc, char **argv) {
+void Arguments::displayHelp() {
+  cout << helpText << endl;
+}
+
+bool Arguments::readArguments(int argc, const char **argv) {
+  if (argc <= 1) return false;
   for (int i = 1; i < argc; ++i) {
     if (argv[i][0] == '-') { // a switch argument
       size_t len = strlen(argv[i]);
@@ -8,13 +13,12 @@ Arguments::Arguments(int argc, char **argv) {
         switch (argv[i][j]) { // display help
           case 'm': multipleGuards = true; break;
           case 'v': displaySets = true; break;
-          default: throw "unexpected argument";
+          default: return false;
         }
       }
+    } else { // is the filenames
+      inputFile = string(argv[i]);
     }
   }
-}
-
-void Arguments::displayHelp() {
-  cout << helpText << endl;
+  return true;
 }

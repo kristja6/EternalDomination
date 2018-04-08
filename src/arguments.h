@@ -12,8 +12,8 @@ struct Arguments {
     -v\t\t\tdisplay all m-eternal dominating sets\n\
 ";
 
-
-  Arguments(int argc, char* argv[]);
+  // return true on success
+  bool readArguments(int argc, const char* argv[]);
 
   void displayHelp();
 
@@ -22,4 +22,4 @@ struct Arguments {
   bool displaySets = false;
 };
 
-#endif ARGUMENTS_H
+#endif
