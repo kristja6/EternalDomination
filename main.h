@@ -9,6 +9,10 @@
 #include <vector>
 #include <queue>
 #include <fstream>
+#include <set>
+#include <map>
+#include <assert.h>
+#include <unordered_set>
 
 using ll=long long;
 
@@ -152,12 +156,106 @@ struct Graph {
     int cnt = 0;
     for (int i = 0; i < vertices.size(); ++i) {
       if (!vertices[i].removed) {
-        cnt ++;
         cout << "-------" << endl;
-        cout << "State " << cnt << ": " << endl;
+        cout << "State " << i << ": " << endl;
+        for (int j = 0; j < vertices[i].edges.size(); ++ j) {
+          cout << vertices[i].edges[j] << " ";
+        }
+        cout << endl;
         vertices[i].g->output();
       }
     }
+  }
+
+
+  bool canStrategyBeaClique(int edn, int inputSize) {
+    // test various clique sizes up to |V| - edn
+    for (int i = 1; i <= inputSize - edn + 1; ++i) {
+      cout << "phase: " << i << endl;
+      if (canStrategyBeACliqueRec(i, inputSize, 0, vector<int>())) {
+        cout << "size of the clique is " << i << endl;
+        return true;
+      }
+    }
+    cout << "STRATEGY CANNOT BE A CLIQUE!!!!!!!!!!!!!!!!!!!!!!!" << endl;
+    return false;
+  }
+
+  bool canStrategyBeACliqueRec(int k, int inputSize, int start, vector<int> selected) {
+    if (k == 0) { // test if the selected vertices create a safe configuration
+      // test if the selected are a clique
+      for (int j = 0; j < selected.size(); ++j) {
+        //cout << selected[j] << " ";
+      }
+      //cout << endl;
+      if (!isAClique(selected)) return false;
+
+      Graph* reduced = new Graph(*this);
+      for (int i = 0; i < size(); ++i) {
+        reduced->vertices[i].removed = true;
+      }
+      // set not selected as removed
+      for (int i = 0; i < selected.size(); ++i) {
+        reduced->vertices[ selected[i] ].removed = vertices[ selected[i] ].removed;
+      }
+      reduced->reduceToSafe();
+      for (int i = 0; i < size(); ++i) {
+        if (!reduced->vertices[i].removed) {
+          delete reduced;
+          return true;
+        }
+      }
+      delete reduced;
+      return false;
+    }
+
+    for (int i = start; i < size(); ++i) {
+      vector<int> s = selected;
+      s.push_back(i);
+      if (canStrategyBeACliqueRec(k - 1, inputSize, i + 1, s))
+        return true;
+    }
+    return false;
+  }
+
+  // returns true if G contains some clique of size k
+  bool cliqueProblem(int k) {
+    if (k == 0) return true;
+
+    for (int i = 0; i < size(); ++i) {
+      if (cliqueProblemRec(k - 1, i + 1, vector<int>(1, i)))
+        return true;
+    }
+  }
+
+  bool cliqueProblemRec(int k, int start, vector<int> selected) {
+    if (k == 0) { // test if selected is a clique
+      return isAClique(selected);
+    }
+    for (int i = start; i < size(); ++i) {
+      vector<int> s = selected;
+      s.push_back(i);
+      cliqueProblemRec(k - 1, i + 1, s);
+    }
+    return false;
+  }
+
+  bool isAClique(const vector<int> & selected) {
+    map<int,int> foundAsNeighborCnt;
+    for (int i = 0; i < selected.size(); ++i) {
+      for (int j = 0; j < vertices[selected[i]].edges.size(); ++j) {
+        foundAsNeighborCnt[ vertices[selected[i]].edges[j] ] ++;
+      }
+    }
+    // each of them must a neighbor of k - 1 vertices in a k-clique
+    for (int i = 0; i < selected.size(); ++i) {
+      assert(foundAsNeighborCnt[ selected[i] ] <= selected.size() - 1);
+      if (foundAsNeighborCnt[ selected[i] ] != selected.size() - 1) {
+        //cout << "not: " << selected[i] << ", " << foundAsNeighborCnt[ selected[i] ] << endl;
+        return false;
+      }
+    }
+    return true;
   }
 
   // k is the number of guards
@@ -206,24 +304,32 @@ struct Graph {
 
   // load undirected graph from stdin
   void loadFromStdin() {
-    int n = 0;
-    int e;
-    cin >> e;
-    edgesBuffer = vector<pair<int,int>>(e);
+    int n = -1;
+    //int e;
+    //cin >> e;
+    // set to prevent duplicate edges
+    //int e = 0;
+    auto edgesBuffer = set<pair<int,int>>();
     //cerr << e << " edgesBuffer" << endl;
-    for (int i = 0; i < e; ++i) {
-      cin >> edgesBuffer[i].first >> edgesBuffer[i].second;
-      n = max(edgesBuffer[i].first + 1, n);
-      n = max(edgesBuffer[i].second + 1, n);
+    //for (int i = 0; i < e; ++i) {
+    int tu, tv;
+    while (cin >> tu >> tv) {
+      //cin >> edgesBuffer[i].first >> edgesBuffer[i].second;
+      //e ++;
+      //cin >> tu >> tv;
+      if (tu == tv) continue;
+      edgesBuffer.insert({tu, tv});
+      n = max(tv + 1, n);
+      n = max(tu + 1, n);
     }
+    if (n == -1) throw "no input";
     vertices = vector<GraphVertex>(n);
     for (auto i = edgesBuffer.begin(); i != edgesBuffer.end(); ++ i) {
       vertices[i->first].edges.push_back(i->second);
       vertices[i->second].edges.push_back(i->first);
     }
-    cerr << "finished loading" << endl;
+    //cerr << "finished loading" << endl;
   }
-
   // creates a list of graphs with all possible configurations of k guards
   // and keep only those, which are a dominating set
   void iterateCombinations(int index, int free, vector<Graph*> & result, Graph* curVertex, bool allowMultiple = true) {
@@ -303,7 +409,7 @@ struct Graph {
     int cnt = 0;
     int total = (result.size() * (result.size() - 1)) / 2;
     for (int i = 0; i < result.size(); ++i) {
-      for (int j = i; j < result.size(); ++ j) {
+      for (int j = i + 1; j < result.size(); ++ j) {
         cnt ++;
         if (cnt % 1000 == 0) cout << "progress (edges): " << (cnt*100) / total << "     \r";
         // you can always stay in the current state
