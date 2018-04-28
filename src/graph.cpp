@@ -167,4 +167,4 @@ bool Graph::isDominatingSet() {
   return true;
 }
 
-int Graph::size() const { return static_cast<int>(vertices.size()); }
+int Graph::size() const { return (int)(vertices.size()); }

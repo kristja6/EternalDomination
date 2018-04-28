@@ -1,5 +1,6 @@
 #include "graph.h"
 #include "arguments.h"
+#include "blockcuttree.h"
 
 #define dbg cout;
 
@@ -37,9 +38,20 @@ int main(int argc, const char* argv[]) {
   // output to file
   if (args.displaySets)
     configGraph->outputAllUnremoved();
-
   cout << "domination number = " << dn << endl;
   cout << "m-eternal domination number = " << edn << endl;
+
+  BlockCutTree bc(&g);
+  /*cout << "bc size: " << bc.size() << endl;
+  // display bc
+  for (int i = 0; i < bc.size(); ++i) {
+    cout << i << ">>" << "i: " << bc.vertices[i].block << endl;
+    for (int j = 0; j < bc.vertices[i].edges.size(); ++j) {
+      cout << bc.vertices[i].edges[j] << " ";
+    }
+    cout << endl;
+  }*/
+  cout << "is cactus: " << bc.isCactus() << "            " << endl;
 
   delete configGraph;
 
