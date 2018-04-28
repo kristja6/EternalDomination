@@ -21,6 +21,8 @@ struct InputGraphVertex {
   int totalArtComps = 1;
   vector<int> cliqueId;
   int visitedEdges = 0;
+  int time = -1;
+  int parent;
 
   // information for articulation
   bool holdsLeaves = false;
@@ -49,6 +51,7 @@ struct BlockCutTree {
   Graph* in;
   vector<int> cliqueVertices;
   vector<int> cliqueEdges;
+  bool connected;
 
   BlockCutTree(Graph* in): in(in) {
     for (int i = 0; i < in->size(); ++i) {
@@ -58,8 +61,10 @@ struct BlockCutTree {
         inV[i].edges.push_back(in->vertices[i].edges[j]);
       }
     }
-    cliqueEdges = vector<int>(inV.size(), -1);
-    markCliques();
+    cliqueEdges = vector<int>(inV.size(), 0);
+    cliqueVertices = vector<int>(inV.size(), 0);
+    markDfs();
+    /*markCliques();
     for (int i = 0; i < cliqueEdges.size(); ++i) {
       cliqueEdges[i] /= 2;
     }
@@ -69,7 +74,7 @@ struct BlockCutTree {
       for (int j = 0; j < inV[i].cliqueId.size(); ++j) {
         cliqueVertices[ inV[i].cliqueId[j] ] ++;
       }
-    }
+    }*/
     // add all blocks
     // the first n blocks are ordered by their ids
     for (int i = 0; i < cliqueVertices.size(); ++i) {
@@ -83,10 +88,13 @@ struct BlockCutTree {
       if (inV[i].cliqueId.size() > 1) {
         vertices.push_back(BlockCutTreeVertex(false, 0));
 
+        //cout << "deg: " << endl;
         for (int j = 0; j < inV[i].cliqueId.size(); ++j) {
           vertices.back().edges.push_back(inV[i].cliqueId[j]);
           vertices[inV[i].cliqueId[j]].edges.push_back(vertices.size() - 1);
+          //cout << "::" << inV[i].cliqueId[j] << endl;
         }
+        //cout << vertices.back().edges.size() << endl;
       }
     }
     // in the case the graph is 2-connected
@@ -123,11 +131,91 @@ struct BlockCutTree {
     if (parent == -1) inV[i].totalArtComps = inV[i].articulationComps = inV[i].childCount;
   }
 
+  int time = 0;
+  int curCliqueId = 0;
+  // source: https://www.geeksforgeeks.org/biconnected-components/
+  void markDfs() {
+    int cnt = 0;
+    for (int i = 0; i < inV.size(); ++i) {
+      if (inV[i].time == -1) {
+        cnt ++;
+        vector<pair<int,int>> edgesSt;
+        markDfsHelp(i, edgesSt);
+
+        int j = 0;
+        unordered_set<int> edgeVertices;
+        while (!edgesSt.empty()) {
+          j = 1;
+          edgeVertices.insert(edgesSt.back().first);
+          edgeVertices.insert(edgesSt.back().second);
+          //cout << edgesSt.back().first << ", " << edgesSt.back().second << endl;
+
+          edgesSt.pop_back();
+          cliqueEdges[curCliqueId] ++;
+        }
+        if (j == 1) {
+          cliqueVertices[curCliqueId] += edgeVertices.size();
+          for (auto i = edgeVertices.begin(); i != edgeVertices.end(); ++ i) {
+            inV[*i].cliqueId.push_back(curCliqueId);
+          }
+          curCliqueId ++;
+        }
+      }
+    }
+    connected = (cnt == 1);
+  }
+
+  void markDfsHelp(int u, vector<pair<int,int>> & edgesSt) {
+    time ++;
+    inV[u].time = time;
+    inV[u].low = time;
+
+    int children = 0;
+
+    for (int j = 0; j < inV[u].edges.size(); ++j) {
+      const int v = inV[u].edges[j];
+
+      if (inV[v].time == -1) {
+        children ++;
+        inV[v].parent = u;
+        edgesSt.push_back({u, v});
+        markDfsHelp(v, edgesSt);
+        inV[u].low = min(inV[u].low, inV[v].low);
+
+        // If u is an articulation, pop all edges from stack till u -- v
+        if ((inV[u].time == 1 && children > 1)
+            || (inV[u].time > 1 && inV[v].low >= inV[u].time)) {
+          unordered_set<int> edgeVertices;
+          while (edgesSt.back().first != u || edgesSt.back().second != v) {
+            edgeVertices.insert(edgesSt.back().first);
+            edgeVertices.insert(edgesSt.back().second);
+
+            edgesSt.pop_back();
+            cliqueEdges[curCliqueId] ++;
+          }
+          edgeVertices.insert(edgesSt.back().first);
+          edgeVertices.insert(edgesSt.back().second);
+
+          edgesSt.pop_back();
+          cliqueEdges[curCliqueId] ++;
+          cliqueVertices[curCliqueId] += edgeVertices.size();
+          for (auto i = edgeVertices.begin(); i != edgeVertices.end(); ++ i) {
+            inV[*i].cliqueId.push_back(curCliqueId);
+          }
+          curCliqueId ++;
+        }
+      } else if (v != inV[u].parent && inV[v].time < inV[u].low) {
+        inV[u].low = min(inV[u].low, inV[v].time);
+        edgesSt.push_back({u, v});
+      }
+    }
+  }
+
   // returns max size so far
   void markingDfs(int i, int cliqueId, vector<int> & unmark, int size = 0) {
     // every time we try to visit this vertex, it must be through a different
     // vertex, therefore using a different edge.
-    cout << i << endl;
+    //cout << i << endl;
     // count for each passed edge. Starts with -1 because of the initial call
 
     if (inV[i].visited == cliqueId + 1 || inV[i].visited == 0)cliqueEdges[cliqueId] ++;
@@ -420,13 +508,14 @@ struct BlockCutTree {
     int e = 0;
     for (int i = 0; i < cliqueEdges.size(); ++i) {
       if (cliqueEdges[i] == 0) continue;
-      else if (cliqueEdges[i] == 2) continue;
+      else if (cliqueEdges[i] == 1) continue;
       else {
-        cout << i << ": " << cliqueEdges[i] << ", " << cliqueVertices[i] << endl;
+        //cout << i << ": " << cliqueEdges[i] << ", " << cliqueVertices[i] << endl;
         if (cliqueEdges[i] != cliqueVertices[i]) return false;
       }
     }
-    return true;
+    // also has to be connected
+    return connected;
   }
 
   int size() const { return (int)vertices.size(); }

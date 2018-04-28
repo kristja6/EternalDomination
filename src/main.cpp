@@ -1,6 +1,7 @@
 #include "graph.h"
 #include "arguments.h"
 #include "blockcuttree.h"
+#include "cactus.h"
 
 #define dbg cout;
 
@@ -51,7 +52,11 @@ int main(int argc, const char* argv[]) {
     }
     cout << endl;
   }*/
-  cout << "is cactus: " << bc.isCactus() << "            " << endl;
+  if (bc.isCactus()) {
+    Cactus cactus(bc);
+    cout << "cactus result: " << cactus.EGC() << endl;
+
+  }
 
   delete configGraph;
 
