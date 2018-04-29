@@ -22,7 +22,7 @@ struct InputGraphVertex {
   vector<int> cliqueId;
   int visitedEdges = 0;
   int time = -1;
-  int parent;
+  int parent = -1;
 
   // information for articulation
   bool holdsLeaves = false;
@@ -204,7 +204,7 @@ struct BlockCutTree {
           }
           curCliqueId ++;
         }
-      } else if (v != inV[u].parent && inV[v].time < inV[u].low) {
+      } else if (v != inV[u].parent && inV[v].time < inV[u].time) {
         inV[u].low = min(inV[u].low, inV[v].time);
         edgesSt.push_back({u, v});
       }
@@ -502,7 +502,11 @@ struct BlockCutTree {
     return edn;
   }
 
+  // check if it is a cactus with every articulation in two blocks
   bool isCactus() {
+    for (int i = 0; i < vertices.size(); ++i) {
+      if (!vertices[i].block && vertices[i].edges.size() > 2) return false;
+    }
     /* G is a cactus iff |E| */
     int v = 0;
     int e = 0;
@@ -511,7 +515,10 @@ struct BlockCutTree {
       else if (cliqueEdges[i] == 1) continue;
       else {
         //cout << i << ": " << cliqueEdges[i] << ", " << cliqueVertices[i] << endl;
-        if (cliqueEdges[i] != cliqueVertices[i]) return false;
+        if (cliqueEdges[i] != cliqueVertices[i]) {
+          //cout << "not a cactus" << endl;
+          return false;
+        }
       }
     }
     // also has to be connected

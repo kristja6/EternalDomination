@@ -13,6 +13,7 @@ bool Arguments::readArguments(int argc, const char **argv) {
         switch (argv[i][j]) { // display help
           case 'm': multipleGuards = true; break;
           case 'v': displaySets = true; break;
+          case 'e': bruteforce = true; break;
           default: return false;
         }
       }

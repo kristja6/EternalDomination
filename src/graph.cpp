@@ -34,12 +34,12 @@ void Graph::iterateCombinations(int index, int free, vector<Graph *> &result, Gr
   }
 
   // add i guards to the current vertices
-  const int maxGuards = allowMultiple ? free : 1;
+  const int maxGuards = allowMultiple ? free : min(free, 1);
 
   for (int i = 0; i <= maxGuards; ++ i) {
     Graph* newVertex = new Graph(*curVertex);
     newVertex->vertices[index].guards = i;
-    iterateCombinations(index + 1, free - i, result, newVertex);
+    iterateCombinations(index + 1, free - i, result, newVertex, allowMultiple);
   }
 }
 
@@ -96,7 +96,7 @@ ConfigGraph *Graph::createConfigurationGraph(int k, bool multipleGuards) {
   for (int i = 0; i < result->size(); ++i) {
     for (int j = i + 1; j < result->size(); ++ j) {
       cnt ++;
-      if (cnt % 1000 == 0) cout << "progress (edges): " << (cnt*100) / total << "     \r";
+      //if (cnt % 1000 == 0) cout << "progress (edges): " << (cnt*100) / total << "     \r";
       // you can always stay in the current state
       if (i == j || oneMoveDistance(*allConfigs[i], *allConfigs[j], k)) {
         /*cout << "adding edge" << endl;

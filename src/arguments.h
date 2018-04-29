@@ -10,6 +10,7 @@ struct Arguments {
   Options:\n\
     -m\t\t\tallow multiple guards to stand on one vertex\n\
     -v\t\t\tdisplay all m-eternal dominating sets\n\
+    -e\t\t\trun the bruteforce algorithm\
 ";
 
   // return true on success
@@ -20,6 +21,7 @@ struct Arguments {
   string inputFile;
   bool multipleGuards = false;
   bool displaySets = false;
+  bool bruteforce = false;
 };
 
 #endif
