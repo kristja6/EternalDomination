@@ -9,7 +9,6 @@ void Graph::output() {
 }
 
 void ConfigGraph::outputAllUnremoved() {
-  int cnt = 0;
   for (int i = 0; i < vertices.size(); ++i) {
     if (!vertices[i].removed) {
       cout << "-------" << endl;
@@ -45,7 +44,6 @@ void Graph::iterateCombinations(int index, int free, vector<Graph *> &result, Gr
 
 bool Graph::oneMoveDistance(Graph &g, Graph &h, int k) {
   Network net(g.size() + h.size() + 3);
-  //net.init();
   const int source = 0, sink = 1;
   int offset = 2;
   // create edges for all vertices in G
@@ -66,14 +64,12 @@ bool Graph::oneMoveDistance(Graph &g, Graph &h, int k) {
     if (!g.vertices[i].guards) continue;
 
     // create edge to yourself
-    net.addEdge(i + 2, i + g.vertices.size() + 2, 999);
+    net.addEdge(i + 2, i + g.vertices.size() + 2, k + 1);
 
     for (int j = 0; j < g.vertices[i].edges.size(); ++j) {
       if (!h.vertices[ g.vertices[i].edges[j] ].guards) continue;
 
-      // TODO: 999 -> Inf
-      // cerr << "a" << endl;
-      net.addEdge(i + 2, g.vertices[i].edges[j] + g.vertices.size() + 2, 999);
+      net.addEdge(i + 2, g.vertices[i].edges[j] + g.vertices.size() + 2, k + 1);
     }
   }
   return net.maxFlow(source, sink) == k;
@@ -81,15 +77,15 @@ bool Graph::oneMoveDistance(Graph &g, Graph &h, int k) {
 
 ConfigGraph *Graph::createConfigurationGraph(int k, bool multipleGuards) {
   vector<Graph*> allConfigs;
-  //cout << "iterating combinations..." << endl;
+  // get all possible guard configurations
   iterateCombinations(0, k, allConfigs, new Graph(*this), multipleGuards);
 
   ConfigGraph *result = new ConfigGraph();
   for (auto &config : allConfigs) {
+    // copy the pointers into the current graph
     result->vertices.push_back(ConfigGraphVertex(config));
   }
 
-  //cout << "creating edges..." << endl;
   // create edges between configurations
   int cnt = 0;
   for (int i = 0; i < result->size(); ++i) {
@@ -108,7 +104,7 @@ ConfigGraph *Graph::createConfigurationGraph(int k, bool multipleGuards) {
 void ConfigGraph::reduceToSafe() {
   bool removedAny;
   do {
-    // clear information on which vertices are safe
+    // clear information on which vertices are safe (meaning they can defend against any attack)
     for (auto &vertex : vertices) {
       vertex.safe = vector<bool>(vertex.g->size(), false);
       for (int j = 0; j < vertex.g->vertices.size(); ++j) {
@@ -130,9 +126,13 @@ void ConfigGraph::reduceToSafe() {
           if (config->vertices[l].guards) vertex.safe[l] = true;
         }
       }
+
       bool isUnsafe = false;
       for (int j = 0; j < vertex.safe.size(); ++j) {
-        if (!vertex.safe[j]) isUnsafe = true;
+        if (!vertex.safe[j]) {
+          isUnsafe = true;
+          break;
+        }
       }
       if (isUnsafe) {
         vertex.removed = true;

@@ -11,7 +11,7 @@ using namespace std;
 
 struct InputGraphVertex {
   vector<int> edges;
-  vector<int> cliqueId;
+  vector<int> blockIds;
   int low = 0;
   int time = -1;
   int parent = -1;
@@ -26,10 +26,10 @@ struct BlockCutTreeVertex {
 };
 
 struct BlockCutTree {
-  vector<InputGraphVertex> inV;
+  vector<InputGraphVertex> inputVertices;
   vector<BlockCutTreeVertex> vertices;
-  vector<int> cliqueVertices;
-  vector<int> cliqueEdges;
+  vector<int> blockVertexCounts;
+  vector<int> blockEdgeCounts;
   bool connected = false;
   Graph* in = nullptr;
 

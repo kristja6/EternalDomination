@@ -24,6 +24,7 @@ struct GraphVertex {
   int guards = 0;
 };
 
+// represents one graph
 struct Graph {
   vector<GraphVertex> vertices;
 

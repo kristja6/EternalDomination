@@ -55,7 +55,7 @@ int main(int argc, const char* argv[]) {
     BlockCutTree bc(&g);
     if (bc.isCactus()) {
       Cactus cactus(bc);
-      cout << "m-edn (cactus result) = " << cactus.EGC() << endl;
+      cout << "cactus result:                " << cactus.EGC() << endl;
 
     }
   } catch (const char* msg) {
