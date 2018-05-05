@@ -11,7 +11,6 @@
 #include <fstream>
 #include <set>
 #include <map>
-#include <assert.h>
 #include <unordered_set>
 
 #include "max-flow.h"
@@ -22,7 +21,7 @@ struct ConfigGraph;
 
 struct GraphVertex {
   vector<int> edges;
-  int guards;
+  int guards = 0;
 };
 
 struct Graph {
@@ -42,9 +41,9 @@ struct Graph {
     }
     if (n == -1) throw "no input";
     vertices = vector<GraphVertex>(n);
-    for (auto i = edgesBuffer.begin(); i != edgesBuffer.end(); ++ i) {
-      vertices[i->first].edges.push_back(i->second);
-      vertices[i->second].edges.push_back(i->first);
+    for (const auto &i : edgesBuffer) {
+      vertices[i.first].edges.push_back(i.second);
+      vertices[i.second].edges.push_back(i.first);
     }
   }
 

@@ -1,0 +1,3000 @@
+../inputs/random_cacti/0.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/100.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/101.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/102.txt$
+m-eternal domination number = 5
+cactus result:                5
+../inputs/random_cacti/103.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/104.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/105.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/106.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/107.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/108.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/109.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/10.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/110.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/111.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/112.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/113.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/114.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/115.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/116.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/117.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/118.txt$
+m-eternal domination number = 6
+cactus result:                6
+../inputs/random_cacti/119.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/11.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/120.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/121.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/122.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/123.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/124.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/125.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/126.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/127.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/128.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/129.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/12.txt$
+m-eternal domination number = 5
+cactus result:                5
+../inputs/random_cacti/130.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/131.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/132.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/133.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/134.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/135.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/136.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/137.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/138.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/139.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/13.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/140.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/141.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/142.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/143.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/144.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/145.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/146.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/147.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/148.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/149.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/14.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/150.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/151.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/152.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/153.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/154.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/155.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/156.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/157.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/158.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/159.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/15.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/160.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/161.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/162.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/163.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/164.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/165.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/166.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/167.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/168.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/169.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/16.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/170.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/171.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/172.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/173.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/174.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/175.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/176.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/177.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/178.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/179.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/17.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/180.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/181.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/182.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/183.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/184.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/185.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/186.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/187.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/188.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/189.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/18.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/190.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/191.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/192.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/193.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/194.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/195.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/196.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/197.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/198.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/199.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/19.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/1.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/200.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/201.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/202.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/203.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/204.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/205.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/206.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/207.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/208.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/209.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/20.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/210.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/211.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/212.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/213.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/214.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/215.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/216.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/217.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/218.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/219.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/21.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/220.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/221.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/222.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/223.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/224.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/225.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/226.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/227.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/228.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/229.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/22.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/230.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/231.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/232.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/233.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/234.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/235.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/236.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/237.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/238.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/239.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/23.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/240.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/241.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/242.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/243.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/244.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/245.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/246.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/247.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/248.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/249.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/24.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/250.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/251.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/252.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/253.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/254.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/255.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/256.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/257.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/258.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/259.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/25.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/260.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/261.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/262.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/263.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/264.txt$
+m-eternal domination number = 5
+cactus result:                5
+../inputs/random_cacti/265.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/266.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/267.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/268.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/269.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/26.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/270.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/271.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/272.txt$
+m-eternal domination number = 5
+cactus result:                5
+../inputs/random_cacti/273.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/274.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/275.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/276.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/277.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/278.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/279.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/27.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/280.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/281.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/282.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/283.txt$
+m-eternal domination number = 5
+cactus result:                5
+../inputs/random_cacti/284.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/285.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/286.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/287.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/288.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/289.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/28.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/290.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/291.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/292.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/293.txt$
+m-eternal domination number = 5
+cactus result:                5
+../inputs/random_cacti/294.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/295.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/296.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/297.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/298.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/299.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/29.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/2.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/300.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/301.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/302.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/303.txt$
+m-eternal domination number = 5
+cactus result:                5
+../inputs/random_cacti/304.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/305.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/306.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/307.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/308.txt$
+m-eternal domination number = 1
+cactus result:                1
+../inputs/random_cacti/309.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/30.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/310.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/311.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/312.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/313.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/314.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/315.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/316.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/317.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/318.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/319.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/31.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/320.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/321.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/322.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/323.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/324.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/325.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/326.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/327.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/328.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/329.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/32.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/330.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/331.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/332.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/333.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/334.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/335.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/336.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/337.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/338.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/339.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/33.txt$
+m-eternal domination number = 5
+cactus result:                5
+../inputs/random_cacti/340.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/341.txt$
+m-eternal domination number = 1
+cactus result:                1
+../inputs/random_cacti/342.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/343.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/344.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/345.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/346.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/347.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/348.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/349.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/34.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/350.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/351.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/352.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/353.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/354.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/355.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/356.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/357.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/358.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/359.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/35.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/360.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/361.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/362.txt$
+m-eternal domination number = 5
+cactus result:                5
+../inputs/random_cacti/363.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/364.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/365.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/366.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/367.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/368.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/369.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/36.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/370.txt$
+m-eternal domination number = 5
+cactus result:                5
+../inputs/random_cacti/371.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/372.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/373.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/374.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/375.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/376.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/377.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/378.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/379.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/37.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/380.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/381.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/382.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/383.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/384.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/385.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/386.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/387.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/388.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/389.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/38.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/390.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/391.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/392.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/393.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/394.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/395.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/396.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/397.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/398.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/399.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/39.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/3.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/400.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/401.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/402.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/403.txt$
+m-eternal domination number = 5
+cactus result:                5
+../inputs/random_cacti/404.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/405.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/406.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/407.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/408.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/409.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/40.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/410.txt$
+m-eternal domination number = 5
+cactus result:                5
+../inputs/random_cacti/411.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/412.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/413.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/414.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/415.txt$
+m-eternal domination number = 5
+cactus result:                5
+../inputs/random_cacti/416.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/417.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/418.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/419.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/41.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/420.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/421.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/422.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/423.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/424.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/425.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/426.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/427.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/428.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/429.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/42.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/430.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/431.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/432.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/433.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/434.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/435.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/436.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/437.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/438.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/439.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/43.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/440.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/441.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/442.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/443.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/444.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/445.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/446.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/447.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/448.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/449.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/44.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/450.txt$
+m-eternal domination number = 5
+cactus result:                5
+../inputs/random_cacti/451.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/452.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/453.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/454.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/455.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/456.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/457.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/458.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/459.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/45.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/460.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/461.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/462.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/463.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/464.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/465.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/466.txt$
+m-eternal domination number = 5
+cactus result:                5
+../inputs/random_cacti/467.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/468.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/469.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/46.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/470.txt$
+m-eternal domination number = 5
+cactus result:                5
+../inputs/random_cacti/471.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/472.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/473.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/474.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/475.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/476.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/477.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/478.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/479.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/47.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/480.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/481.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/482.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/483.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/484.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/485.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/486.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/487.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/488.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/489.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/48.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/490.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/491.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/492.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/493.txt$
+m-eternal domination number = 6
+cactus result:                6
+../inputs/random_cacti/494.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/495.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/496.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/497.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/498.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/499.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/49.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/4.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/500.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/501.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/502.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/503.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/504.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/505.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/506.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/507.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/508.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/509.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/50.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/510.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/511.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/512.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/513.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/514.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/515.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/516.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/517.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/518.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/519.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/51.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/520.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/521.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/522.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/523.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/524.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/525.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/526.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/527.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/528.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/529.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/52.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/530.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/531.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/532.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/533.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/534.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/535.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/536.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/537.txt$
+m-eternal domination number = 6
+cactus result:                6
+../inputs/random_cacti/538.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/539.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/53.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/540.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/541.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/542.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/543.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/544.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/545.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/546.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/547.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/548.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/549.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/54.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/550.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/551.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/552.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/553.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/554.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/555.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/556.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/557.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/558.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/559.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/55.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/560.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/561.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/562.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/563.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/564.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/565.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/566.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/567.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/568.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/569.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/56.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/570.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/571.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/572.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/573.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/574.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/575.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/576.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/577.txt$
+m-eternal domination number = 5
+cactus result:                5
+../inputs/random_cacti/578.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/579.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/57.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/580.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/581.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/582.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/583.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/584.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/585.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/586.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/587.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/588.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/589.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/58.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/590.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/591.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/592.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/593.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/594.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/595.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/596.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/597.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/598.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/599.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/59.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/5.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/600.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/601.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/602.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/603.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/604.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/605.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/606.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/607.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/608.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/609.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/60.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/610.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/611.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/612.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/613.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/614.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/615.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/616.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/617.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/618.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/619.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/61.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/620.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/621.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/622.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/623.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/624.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/625.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/626.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/627.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/628.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/629.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/62.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/630.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/631.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/632.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/633.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/634.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/635.txt$
+m-eternal domination number = 5
+cactus result:                5
+../inputs/random_cacti/636.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/637.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/638.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/639.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/63.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/640.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/641.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/642.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/643.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/644.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/645.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/646.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/647.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/648.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/649.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/64.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/650.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/651.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/652.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/653.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/654.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/655.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/656.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/657.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/658.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/659.txt$
+m-eternal domination number = 5
+cactus result:                5
+../inputs/random_cacti/65.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/660.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/661.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/662.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/663.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/664.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/665.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/666.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/667.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/668.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/669.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/66.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/670.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/671.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/672.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/673.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/674.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/675.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/676.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/677.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/678.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/679.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/67.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/680.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/681.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/682.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/683.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/684.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/685.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/686.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/687.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/688.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/689.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/68.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/690.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/691.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/692.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/693.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/694.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/695.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/696.txt$
+m-eternal domination number = 7
+cactus result:                7
+../inputs/random_cacti/697.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/698.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/699.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/69.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/6.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/700.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/701.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/702.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/703.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/704.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/705.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/706.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/707.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/708.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/709.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/70.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/710.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/711.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/712.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/713.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/714.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/715.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/716.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/717.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/718.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/719.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/71.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/720.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/721.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/722.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/723.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/724.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/725.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/726.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/727.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/728.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/729.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/72.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/730.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/731.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/732.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/733.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/734.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/735.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/736.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/737.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/738.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/739.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/73.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/740.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/741.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/742.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/743.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/744.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/745.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/746.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/747.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/748.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/749.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/74.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/750.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/751.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/752.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/753.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/754.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/755.txt$
+m-eternal domination number = 5
+cactus result:                5
+../inputs/random_cacti/756.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/757.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/758.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/759.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/75.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/760.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/761.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/762.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/763.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/764.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/765.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/766.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/767.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/768.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/769.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/76.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/770.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/771.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/772.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/773.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/774.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/775.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/776.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/777.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/778.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/779.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/77.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/780.txt$
+m-eternal domination number = 5
+cactus result:                5
+../inputs/random_cacti/781.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/782.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/783.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/784.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/785.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/786.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/787.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/788.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/789.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/78.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/790.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/791.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/792.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/793.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/794.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/795.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/796.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/797.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/798.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/799.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/79.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/7.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/800.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/801.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/802.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/803.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/804.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/805.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/806.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/807.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/808.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/809.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/80.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/810.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/811.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/812.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/813.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/814.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/815.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/816.txt$
+m-eternal domination number = 5
+cactus result:                5
+../inputs/random_cacti/817.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/818.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/819.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/81.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/820.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/821.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/822.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/823.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/824.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/825.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/826.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/827.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/828.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/829.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/82.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/830.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/831.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/832.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/833.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/834.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/835.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/836.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/837.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/838.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/839.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/83.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/840.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/841.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/842.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/843.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/844.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/845.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/846.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/847.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/848.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/849.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/84.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/850.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/851.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/852.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/853.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/854.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/855.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/856.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/857.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/858.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/859.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/85.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/860.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/861.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/862.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/863.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/864.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/865.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/866.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/867.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/868.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/869.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/86.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/870.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/871.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/872.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/873.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/874.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/875.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/876.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/877.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/878.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/879.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/87.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/880.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/881.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/882.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/883.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/884.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/885.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/886.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/887.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/888.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/889.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/88.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/890.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/891.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/892.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/893.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/894.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/895.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/896.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/897.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/898.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/899.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/89.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/8.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/900.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/901.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/902.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/903.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/904.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/905.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/906.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/907.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/908.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/909.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/90.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/910.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/911.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/912.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/913.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/914.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/915.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/916.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/917.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/918.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/919.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/91.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/920.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/921.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/922.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/923.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/924.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/925.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/926.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/927.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/928.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/929.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/92.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/930.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/931.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/932.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/933.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/934.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/935.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/936.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/937.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/938.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/939.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/93.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/940.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/941.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/942.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/943.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/944.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/945.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/946.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/947.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/948.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/949.txt$
+m-eternal domination number = 5
+cactus result:                5
+../inputs/random_cacti/94.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/950.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/951.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/952.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/953.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/954.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/955.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/956.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/957.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/958.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/959.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/95.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/960.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/961.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/962.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/963.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/964.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/965.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/966.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/967.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/968.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/969.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/96.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/970.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/971.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/972.txt$
+m-eternal domination number = 5
+cactus result:                5
+../inputs/random_cacti/973.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/974.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/975.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/976.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/977.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/978.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/979.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/97.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/980.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/981.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/982.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/983.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/984.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/985.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/986.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/987.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/988.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/989.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/98.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/990.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/991.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/992.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/993.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/994.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/995.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/996.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/997.txt$
+m-eternal domination number = 3
+cactus result:                3
+../inputs/random_cacti/998.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/999.txt$
+m-eternal domination number = 4
+cactus result:                4
+../inputs/random_cacti/99.txt$
+m-eternal domination number = 2
+cactus result:                2
+../inputs/random_cacti/9.txt$
+m-eternal domination number = 4
+cactus result:                4

@@ -14,6 +14,7 @@ bool Arguments::readArguments(int argc, const char **argv) {
           case 'm': multipleGuards = true; break;
           case 'v': displaySets = true; break;
           case 'e': bruteforce = true; break;
+          case 'd': dominationNumber = true; break;
           default: return false;
         }
       }

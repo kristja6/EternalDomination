@@ -14,8 +14,8 @@ void ConfigGraph::outputAllUnremoved() {
     if (!vertices[i].removed) {
       cout << "-------" << endl;
       cout << "State " << i << ": " << endl;
-      for (int j = 0; j < vertices[i].edges.size(); ++ j) {
-        cout << vertices[i].edges[j] << " ";
+      for (int edge : vertices[i].edges) {
+        cout << edge << " ";
       }
       cout << endl;
       vertices[i].g->output();
@@ -85,24 +85,17 @@ ConfigGraph *Graph::createConfigurationGraph(int k, bool multipleGuards) {
   iterateCombinations(0, k, allConfigs, new Graph(*this), multipleGuards);
 
   ConfigGraph *result = new ConfigGraph();
-  for (auto i = allConfigs.begin(); i != allConfigs.end(); ++ i) {
-    result->vertices.push_back(ConfigGraphVertex(*i));
+  for (auto &config : allConfigs) {
+    result->vertices.push_back(ConfigGraphVertex(config));
   }
 
   //cout << "creating edges..." << endl;
   // create edges between configurations
   int cnt = 0;
-  int total = (result->size() * (result->size() - 1)) / 2;
   for (int i = 0; i < result->size(); ++i) {
     for (int j = i + 1; j < result->size(); ++ j) {
       cnt ++;
-      //if (cnt % 1000 == 0) cout << "progress (edges): " << (cnt*100) / total << "     \r";
-      // you can always stay in the current state
-      if (i == j || oneMoveDistance(*allConfigs[i], *allConfigs[j], k)) {
-        /*cout << "adding edge" << endl;
-        allConfigs[i]->output();
-        cout << "----" << endl;
-        allConfigs[j]->output();*/
+      if (oneMoveDistance(*allConfigs[i], *allConfigs[j], k)) {
         // the transition is always both ways
         result->vertices[i].edges.push_back(j);
         result->vertices[j].edges.push_back(i);
@@ -116,33 +109,33 @@ void ConfigGraph::reduceToSafe() {
   bool removedAny;
   do {
     // clear information on which vertices are safe
-    for (int i = 0; i < vertices.size(); ++i) {
-      vertices[i].safe = vector<bool>(vertices[i].g->size(), false);
-      for (int j = 0; j < vertices[i].g->vertices.size(); ++j) {
-        if (vertices[i].g->vertices[j].guards) vertices[i].safe[j] = true;
+    for (auto &vertex : vertices) {
+      vertex.safe = vector<bool>(vertex.g->size(), false);
+      for (int j = 0; j < vertex.g->vertices.size(); ++j) {
+        if (vertex.g->vertices[j].guards) vertex.safe[j] = true;
       }
     }
 
     removedAny = false;
-    for (int i = 0; i < vertices.size(); ++i) {
-      if (vertices[i].removed) continue;
+    for (auto &vertex : vertices) {
+      if (vertex.removed) continue;
 
-      for (int j = 0; j < vertices[i].edges.size(); ++j) {
+      for (int j = 0; j < vertex.edges.size(); ++j) {
         // check which vertices are saved by this move
-        const int neighbor = vertices[i].edges[j];
+        const int neighbor = vertex.edges[j];
         if (vertices[neighbor].removed) continue;
 
         const Graph *config = vertices[neighbor].g;
         for (int l = 0; l < config->size(); ++l) {
-          if (config->vertices[l].guards) vertices[i].safe[l] = true;
+          if (config->vertices[l].guards) vertex.safe[l] = true;
         }
       }
       bool isUnsafe = false;
-      for (int j = 0; j < vertices[i].safe.size(); ++j) {
-        if (!vertices[i].safe[j]) isUnsafe = true;
+      for (int j = 0; j < vertex.safe.size(); ++j) {
+        if (!vertex.safe[j]) isUnsafe = true;
       }
       if (isUnsafe) {
-        vertices[i].removed = true;
+        vertex.removed = true;
         removedAny = true;
       }
     }

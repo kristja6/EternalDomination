@@ -3,9 +3,6 @@
 #include "blockcuttree.h"
 #include "cactus.h"
 
-#define dbg cout;
-
-
 int main(int argc, const char* argv[]) {
   try {
     Arguments args;
@@ -17,14 +14,17 @@ int main(int argc, const char* argv[]) {
     Graph g;
     g.loadFromFile(args.inputFile);
     // find the smallest k for which there is a safe configuration
-    if (args.bruteforce) {
-      bool found = false;
-      int edn;
+    if (args.bruteforce || args.dominationNumber) {
+      int edn = 0;
       int dn = 0;
       ConfigGraph *configGraph = nullptr;
-      for (int i = 1; i < g.size() && !found; ++i) {
+      for (int i = 1; i < g.size(); ++i) {
         configGraph = g.createConfigurationGraph(i, args.multipleGuards);
-        if (configGraph->size() && !dn) dn = i;
+        if (configGraph->size() && !dn) {
+          dn = i;
+          if (!args.bruteforce) break;
+        }
+
         configGraph->reduceToSafe();
         bool found = false;
         for (int j = 0; j < configGraph->size(); ++j) {
@@ -40,33 +40,28 @@ int main(int argc, const char* argv[]) {
       }
 
       // output to file
-      if (args.displaySets)
+      if (args.displaySets && configGraph != nullptr)
         configGraph->outputAllUnremoved();
-      //cout << "domination number = " << dn << endl;
-      cout << "m-eternal domination number = " << edn << endl;
+
+      if (args.dominationNumber)
+        cout << "domination number = " << dn << endl;
+
+      if (args.bruteforce)
+        cout << "m-eternal domination number = " << edn << endl;
+
       delete configGraph;
     }
 
     BlockCutTree bc(&g);
-    /*cout << "bc size: " << bc.size() << endl;
-    // display bc
-    for (int i = 0; i < bc.size(); ++i) {
-      cout << i << ">>" << "i: " << bc.vertices[i].block << endl;
-      for (int j = 0; j < bc.vertices[i].edges.size(); ++j) {
-        cout << bc.vertices[i].edges[j] << " ";
-      }
-      cout << endl;
-    }*/
     if (bc.isCactus()) {
       Cactus cactus(bc);
-      cout << "cactus result:                " << cactus.EGC() << endl;
+      cout << "m-edn (cactus result) = " << cactus.EGC() << endl;
 
     }
   } catch (const char* msg) {
     cout << "Error!" << endl;
     cout << msg << endl;
   }
-
 
   return 0;
 }

@@ -31,16 +31,16 @@ struct Network {
   bool augementPath(int s, int t) { // source,sink
     for(int i = 0; i < vertices; ++ i) back[i] = -1;
     back[s] = -2;
-    for(int i = 0; i < vertices; ++ i) fromS[i] = 0;
+    for(int i = 0; i < vertices; ++ i) fromS[i] = false;
 
     stack<int> q; q.push(s);
     while (!q.empty() && back[t] == -1) { // exists augment path to sink
       int u = q.top(); q.pop();
-      fromS[u]=1;
-      for(int i = 0; i < ng[u].size(); ++ i) {
-        NetworkEdge & edge = edges[ng[u][i]];
+      fromS[u] = true;
+      for (int i : ng[u]) {
+        NetworkEdge & edge = edges[i];
         if (edge.cap && back[edge.to] == -1) { // has capacity
-          back[edge.to] = ng[u][i];
+          back[edge.to] = i;
           q.push(edge.to);
         }
       }
