@@ -20,7 +20,7 @@ objs/max-flow.o: src/max-flow.cpp src/max-flow.h | objs
 objs/main.o: src/main.cpp src/graph.h src/graph.cpp src/arguments.h src/arguments.cpp src/blockcuttree.h src/blockcuttree.cpp src/cactus.h src/cactus.cpp | objs
 	$(CC) $(CFLAGS) -c $< -o $@ $(LIBS)
 
-objs/blockcuttree.o: src/max-flow.cpp src/max-flow.h src/graph.cpp src/graph.h src/blockcuttree.cpp src/blockcuttree.h | objs
+objs/blockcuttree.o: src/blockcuttree.cpp src/max-flow.cpp src/max-flow.h src/graph.cpp src/graph.h src/blockcuttree.h | objs
 	$(CC) $(CFLAGS) -c $< -o $@ $(LIBS)
 
 objs/cactus.o: src/cactus.cpp src/cactus.h src/graph.cpp src/graph.h src/blockcuttree.cpp src/blockcuttree.h | objs

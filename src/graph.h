@@ -28,24 +28,7 @@ struct Graph {
   vector<GraphVertex> vertices;
 
   // load undirected graph from stdin
-  void loadFromFile(const string & filename) {
-    ifstream fileStream(filename);
-    int n = -1;
-    auto edgesBuffer = set<pair<int,int>>();
-    int tu, tv;
-    while (fileStream >> tu >> tv) {
-      if (tu == tv) continue;
-      edgesBuffer.insert({tu, tv});
-      n = max(tv + 1, n);
-      n = max(tu + 1, n);
-    }
-    if (n == -1) throw "no input";
-    vertices = vector<GraphVertex>(n);
-    for (const auto &i : edgesBuffer) {
-      vertices[i.first].edges.push_back(i.second);
-      vertices[i.second].edges.push_back(i.first);
-    }
-  }
+  void loadFromFile(const string & filename);
 
   // creates a list of graphs with all possible configurations of k guards
   // and keep only those, which are a dominating set
