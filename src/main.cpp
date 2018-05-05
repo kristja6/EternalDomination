@@ -43,7 +43,7 @@ int main(int argc, const char* argv[]) {
       if (args.displaySets)
         configGraph->outputAllUnremoved();
       //cout << "domination number = " << dn << endl;
-      //cout << "m-eternal domination number = " << edn << endl;
+      cout << "m-eternal domination number = " << edn << endl;
       delete configGraph;
     }
 

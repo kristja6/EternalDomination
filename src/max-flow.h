@@ -10,7 +10,7 @@ struct NetworkEdge {
   int cap;
 };
 
-// EdmondKarp from ACM codebook (source: Simon Lomic)
+// Modified EdmondKarp from ACM codebook (source: Simon Lomic)
 struct Network {
   vector<NetworkEdge> edges;
   vector<vector<int>> ng; // indexes of edges
@@ -28,14 +28,14 @@ struct Network {
     edges.push_back(NetworkEdge{to, from, 0});
   }
 
-  bool bfs(int s, int t) { // source,sink
+  bool augementPath(int s, int t) { // source,sink
     for(int i = 0; i < vertices; ++ i) back[i] = -1;
     back[s] = -2;
     for(int i = 0; i < vertices; ++ i) fromS[i] = 0;
 
-    queue<int> q; q.push(s);
+    stack<int> q; q.push(s);
     while (!q.empty() && back[t] == -1) { // exists augment path to sink
-      int u = q.front(); q.pop();
+      int u = q.top(); q.pop();
       fromS[u]=1;
       for(int i = 0; i < ng[u].size(); ++ i) {
         NetworkEdge & edge = edges[ng[u][i]];
@@ -50,7 +50,7 @@ struct Network {
 
   int maxFlow(int s, int t) {
     int maxFlow = 0;
-    while (bfs(s, t)) {
+    while (augementPath(s, t)) {
       int flow = 1<<30, node = t; // from sink to source(=-2)
       // find size of the flow = min capacity on the way:
       while (back[node] != -2) {

@@ -124,8 +124,6 @@ struct Cactus {
       del = true;
     }
   }
-
 };
-
 
 #endif //EDN_CACTUS_H

@@ -504,9 +504,9 @@ struct BlockCutTree {
 
   // check if it is a cactus with every articulation in two blocks
   bool isCactus() {
-    for (int i = 0; i < vertices.size(); ++i) {
+    /*for (int i = 0; i < vertices.size(); ++i) {
       if (!vertices[i].block && vertices[i].edges.size() > 2) return false;
-    }
+    }*/
     /* G is a cactus iff |E| */
     int v = 0;
     int e = 0;
