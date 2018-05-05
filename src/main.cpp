@@ -15,10 +15,10 @@ int main(int argc, const char* argv[]) {
     g.loadFromFile(args.inputFile);
     // find the smallest k for which there is a safe configuration
     if (args.bruteforce || args.dominationNumber) {
-      int edn = 0;
+      int edn = -1;
       int dn = 0;
       ConfigGraph *configGraph = nullptr;
-      for (int i = 1; i < g.size(); ++i) {
+      for (int i = 1; i <= g.size(); ++i) {
         configGraph = g.createConfigurationGraph(i, args.multipleGuards);
         if (configGraph->size() && !dn) {
           dn = i;

@@ -21,7 +21,6 @@ struct ConfigGraph;
 
 struct GraphVertex {
   vector<int> edges;
-  int guards = 0;
 };
 
 // represents one graph
@@ -33,41 +32,48 @@ struct Graph {
 
   // creates a list of graphs with all possible configurations of k guards
   // and keep only those, which are a dominating set
-  void iterateCombinations(int index, int free, vector<Graph*> & result, Graph* curVertex, bool allowMultiple = true);
+  void iterateCombinations(int index, int free, vector<vector<int>*> & result, vector<int>* curConfig, bool allowMultiple = true);
 
   // creates a configuration graph of all possible configurations of k guards on this graph.
   // Each vertice in the graph is one configuration
   ConfigGraph* createConfigurationGraph(int k, bool multipleGuards);
 
   // is one configuration passable to other by the rules of eternal domination
-  bool oneMoveDistance(Graph & g, Graph & h, int k);
+  bool oneMoveDistance(const vector<int> & g, const vector<int> & h, int k);
 
   // check whether the current configuration of guards induces a dominating set
-  bool isDominatingSet();
+  bool isDominatingSet(const vector<int> & input);
 
   int size() const;
 
-  void output();
 };
 
 struct ConfigGraphVertex {
   ConfigGraphVertex() = default;
-  ConfigGraphVertex(Graph * g): g(g) {};
+  ConfigGraphVertex(vector<int> * g): guards(g) {};
   vector<int> edges;
-  Graph* g;
   // bitset of which vertices are safe
-  vector<bool> safe;
+  vector<int>* guards;
   bool removed = false;
+
 };
 
 struct ConfigGraph {
   vector<ConfigGraphVertex> vertices;
+  ConfigGraph (Graph* g): g(g) {}
+  Graph* g;
 
   void outputAllUnremoved();
 
   void reduceToSafe();
 
   int size() const;
+
+  ~ConfigGraph() {
+    for (int i = 0; i < vertices.size(); ++i) {
+      delete vertices[i].guards;
+    }
+  }
 };
 
 #endif //EDN_MAIN_H

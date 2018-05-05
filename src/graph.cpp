@@ -1,13 +1,5 @@
 #include "graph.h"
 
-void Graph::output() {
-  for (int i = 0; i < vertices.size(); ++i) {
-    if (vertices[i].guards) {
-      cout << i << ": " << vertices[i].guards << endl;
-    }
-  }
-}
-
 void ConfigGraph::outputAllUnremoved() {
   for (int i = 0; i < vertices.size(); ++i) {
     if (!vertices[i].removed) {
@@ -17,17 +9,20 @@ void ConfigGraph::outputAllUnremoved() {
         cout << edge << " ";
       }
       cout << endl;
-      vertices[i].g->output();
+      for (int j = 0; j < size(); ++j) {
+        if ((*vertices[i].guards)[j])
+          cout << j << ": " << (*vertices[i].guards)[j] << endl;
+      }
     }
   }
 }
 
-void Graph::iterateCombinations(int index, int free, vector<Graph *> &result, Graph *curVertex, bool allowMultiple) {
-  if (index == curVertex->size()) {
-    if (free == 0 && curVertex->isDominatingSet()) {
-      result.push_back(curVertex);
+void Graph::iterateCombinations(int index, int free, vector<vector<int>*> &result, vector<int> *curConfig, bool allowMultiple) {
+  if (index == curConfig->size()) {
+    if (free == 0 && isDominatingSet(*curConfig)) {
+      result.push_back(curConfig);
     } else {
-      delete curVertex;
+      delete curConfig;
     }
     return;
   }
@@ -36,51 +31,52 @@ void Graph::iterateCombinations(int index, int free, vector<Graph *> &result, Gr
   const int maxGuards = allowMultiple ? free : min(free, 1);
 
   for (int i = 0; i <= maxGuards; ++ i) {
-    Graph* newVertex = new Graph(*curVertex);
-    newVertex->vertices[index].guards = i;
-    iterateCombinations(index + 1, free - i, result, newVertex, allowMultiple);
+    vector<int>* newConfig = new vector<int>(*curConfig);
+    (*newConfig)[index] = i;
+    iterateCombinations(index + 1, free - i, result, newConfig, allowMultiple);
   }
 }
 
-bool Graph::oneMoveDistance(Graph &g, Graph &h, int k) {
-  Network net(g.size() + h.size() + 3);
+bool Graph::oneMoveDistance(const vector<int> & g, const vector<int> & h, int k) {
+  Network net(size() + size() + 3);
   const int source = 0, sink = 1;
   int offset = 2;
   // create edges for all vertices in G
-  for (int i = 0; i < g.vertices.size(); ++ i) {
-    if (g.vertices[i].guards) {
-      net.addEdge(source, i + offset, g.vertices[i].guards);
+  for (int i = 0; i < size(); ++ i) {
+    if (g[i]) {
+      net.addEdge(source, i + offset, g[i]);
     }
   }
-  offset += g.vertices.size();
+  offset += size();
   // create edges for all vertices in H
-  for (int i = 0; i < h.vertices.size(); ++ i) {
-    if (h.vertices[i].guards) {
-      net.addEdge(i + offset, sink, h.vertices[i].guards);
+  for (int i = 0; i < size(); ++ i) {
+    if (h[i]) {
+      net.addEdge(i + offset, sink, h[i]);
     }
   }
   // create edges between G and H
-  for (int i = 0; i < g.vertices.size(); ++ i) {
-    if (!g.vertices[i].guards) continue;
+  for (int i = 0; i < size(); ++ i) {
+    if (!g[i]) continue;
 
     // create edge to yourself
-    net.addEdge(i + 2, i + g.vertices.size() + 2, k + 1);
+    net.addEdge(i + 2, i + size() + 2, k + 1);
 
-    for (int j = 0; j < g.vertices[i].edges.size(); ++j) {
-      if (!h.vertices[ g.vertices[i].edges[j] ].guards) continue;
+    for (int j = 0; j < vertices[i].edges.size(); ++j) {
+      if (!h[ vertices[i].edges[j] ]) continue;
 
-      net.addEdge(i + 2, g.vertices[i].edges[j] + g.vertices.size() + 2, k + 1);
+      net.addEdge(i + 2, vertices[i].edges[j] + size() + 2, k + 1);
     }
   }
   return net.maxFlow(source, sink) == k;
 }
 
 ConfigGraph *Graph::createConfigurationGraph(int k, bool multipleGuards) {
-  vector<Graph*> allConfigs;
+  vector<vector<int>*> allConfigs;
   // get all possible guard configurations
-  iterateCombinations(0, k, allConfigs, new Graph(*this), multipleGuards);
+  vector<int>* initialConfig = new vector<int>(size(), 0);
+  iterateCombinations(0, k, allConfigs, initialConfig, multipleGuards);
 
-  ConfigGraph *result = new ConfigGraph();
+  ConfigGraph *result = new ConfigGraph(this);
   for (auto &config : allConfigs) {
     // copy the pointers into the current graph
     result->vertices.push_back(ConfigGraphVertex(config));
@@ -91,7 +87,7 @@ ConfigGraph *Graph::createConfigurationGraph(int k, bool multipleGuards) {
   for (int i = 0; i < result->size(); ++i) {
     for (int j = i + 1; j < result->size(); ++ j) {
       cnt ++;
-      if (oneMoveDistance(*allConfigs[i], *allConfigs[j], k)) {
+      if (oneMoveDistance(*(allConfigs[i]), *(allConfigs[j]), k)) {
         // the transition is always both ways
         result->vertices[i].edges.push_back(j);
         result->vertices[j].edges.push_back(i);
@@ -104,16 +100,15 @@ ConfigGraph *Graph::createConfigurationGraph(int k, bool multipleGuards) {
 void ConfigGraph::reduceToSafe() {
   bool removedAny;
   do {
-    // clear information on which vertices are safe (meaning they can defend against any attack)
-    for (auto &vertex : vertices) {
-      vertex.safe = vector<bool>(vertex.g->size(), false);
-      for (int j = 0; j < vertex.g->vertices.size(); ++j) {
-        if (vertex.g->vertices[j].guards) vertex.safe[j] = true;
-      }
-    }
-
     removedAny = false;
+    // clear information on which vertices are safe (meaning they can defend against any attack)
+
     for (auto &vertex : vertices) {
+      vector<bool> safe(g->size(), false);
+      for (int j = 0; j < g->vertices.size(); ++j) {
+        if ((*vertex.guards)[j]) safe[j] = true;
+      }
+
       if (vertex.removed) continue;
 
       for (int j = 0; j < vertex.edges.size(); ++j) {
@@ -121,15 +116,16 @@ void ConfigGraph::reduceToSafe() {
         const int neighbor = vertex.edges[j];
         if (vertices[neighbor].removed) continue;
 
-        const Graph *config = vertices[neighbor].g;
-        for (int l = 0; l < config->size(); ++l) {
-          if (config->vertices[l].guards) vertex.safe[l] = true;
+        //const Graph *config = vertices[neighbor].g;
+        const vector<int> * config = vertices[neighbor].guards;
+        for (int l = 0; l < g->size(); ++l) {
+          if ((*config)[l]) safe[l] = true;
         }
       }
 
       bool isUnsafe = false;
-      for (int j = 0; j < vertex.safe.size(); ++j) {
-        if (!vertex.safe[j]) {
+      for (int j = 0; j < safe.size(); ++j) {
+        if (!safe[j]) {
           isUnsafe = true;
           break;
         }
@@ -144,17 +140,17 @@ void ConfigGraph::reduceToSafe() {
 
 int ConfigGraph::size() const { return static_cast<int>(vertices.size()); }
 
-bool Graph::isDominatingSet() {
-  vector<bool> dominated(vertices.size(), false);
-  for (int i = 0; i < vertices.size(); ++i) {
-    if (vertices[i].guards) {
+bool Graph::isDominatingSet(const vector<int> & guards) {
+  vector<bool> dominated(size(), false);
+  for (int i = 0; i < size(); ++i) {
+    if (guards[i]) {
       dominated[i] = true;
       for (int j = 0; j < vertices[i].edges.size(); ++j) {
-        dominated[ vertices[i].edges[j] ] = true;
+        dominated[vertices[i].edges[j]] = true;
       }
     }
   }
-  for (int i = 0; i < vertices.size(); ++i) {
+  for (int i = 0; i < size(); ++i) {
     if (!dominated[i]) return false;
   }
   return true;
