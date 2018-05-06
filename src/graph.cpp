@@ -72,7 +72,7 @@ bool Graph::oneMoveDistance(const vector<int> & g, const vector<int> & h, int k)
   return net.maxFlow(source, sink) == k;
 }
 
-ConfigGraph *Graph::createConfigurationGraph(int k, bool multipleGuards) {
+ConfigGraph *Graph::createConfigurationGraph(int k, bool multipleGuards, bool heuristics) {
   vector<vector<int>*> allConfigs;
   // get all possible guard configurations
   vector<int>* initialConfig = new vector<int>(size(), 0);
@@ -84,39 +84,99 @@ ConfigGraph *Graph::createConfigurationGraph(int k, bool multipleGuards) {
     result->vertices.push_back(ConfigGraphVertex(config));
   }
 
+  unsigned long long cnt = 0;
+  unsigned long long limit = 256;
+
+  if (heuristics) {
+    srand(time(0));
+    random_shuffle(result->vertices.begin(), result->vertices.end());
+  }
+
   // create edges between configurations
-  int cnt = 0;
   for (int i = 0; i < result->size(); ++i) {
     for (int j = i + 1; j < result->size(); ++ j) {
-      cnt ++;
-      if (oneMoveDistance(*(allConfigs[i]), *(allConfigs[j]), k)) {
+      if (oneMoveDistance(*(result->vertices[i].guards), *(result->vertices[j].guards), k)) {
         // the transition is always both ways
         result->vertices[i].edges.push_back(j);
         result->vertices[j].edges.push_back(i);
       }
+      cnt ++;
     }
+
+    // return sooner if we already have a valid strategy
+    if (heuristics && cnt >= limit) {
+      cnt = 0;
+      limit = (unsigned long long)(limit*1.25);
+      for (int l = 0; l < size(); ++l) {
+        result->vertices[i].removed = false;
+      }
+      if (result->reduceToSafe()) {
+        return result;
+      }
+    }
+
+    // check whether the vertex on i is safe. If it isn't it won't be safe anytime in future
   }
   return result;
 }
 
-void ConfigGraph::reduceToSafe() {
+bool ConfigGraph::isVertexSafe(int i) const {
+
+  const ConfigGraphVertex & vertex = vertices[i];
+  if (vertex.removed) return false;
+
+  vector<bool> safe(g->size(), false);
+
+  for (int j = 0; j < g->vertices.size(); ++j) {
+    if ((*vertex.guards)[j]) safe[j] = true;
+  }
+
+  for (int j = 0; j < vertex.edges.size(); ++j) {
+    // check which vertices are saved by this move
+    const int neighbor = vertex.edges[j];
+    if (vertices[neighbor].removed) continue;
+
+    const vector<int> * config = vertices[neighbor].guards;
+    for (int l = 0; l < g->size(); ++l) {
+      if ((*config)[l]) safe[l] = true;
+    }
+  }
+
+  bool isUnsafe = false;
+  for (int j = 0; j < safe.size(); ++j) {
+    if (!safe[j]) {
+      isUnsafe = true;
+      break;
+    }
+  }
+  if (isUnsafe) {
+    //vertex.removed = true;
+    return false;
+  }
+
+  return true;
+}
+
+bool ConfigGraph::reduceToSafe() {
   bool removedAny;
+  vector<bool> removedVertices(size(), false);
   do {
     removedAny = false;
     // clear information on which vertices are safe (meaning they can defend against any attack)
 
-    for (auto &vertex : vertices) {
+    for (int i = 0; i < size(); ++ i) {
+      const ConfigGraphVertex & vertex = vertices[i];
+      if (removedVertices[i]) continue;
+
       vector<bool> safe(g->size(), false);
       for (int j = 0; j < g->vertices.size(); ++j) {
         if ((*vertex.guards)[j]) safe[j] = true;
       }
 
-      if (vertex.removed) continue;
-
       for (int j = 0; j < vertex.edges.size(); ++j) {
         // check which vertices are saved by this move
         const int neighbor = vertex.edges[j];
-        if (vertices[neighbor].removed) continue;
+        if (removedVertices[neighbor]) continue;
 
         //const Graph *config = vertices[neighbor].g;
         const vector<int> * config = vertices[neighbor].guards;
@@ -133,11 +193,23 @@ void ConfigGraph::reduceToSafe() {
         }
       }
       if (isUnsafe) {
-        vertex.removed = true;
+        //vertex.removed = true;
+        removedVertices[i] = true;
         removedAny = true;
       }
     }
   } while (removedAny);
+  // check if it is non-empty
+
+  bool isSafe = false;
+  for (int j = 0; j < size(); ++j) {
+    vertices[j].removed = removedVertices[j];
+    // at least one unremoved after reducing
+    if (!removedVertices[j]) {
+      isSafe = true;
+    }
+  }
+  return isSafe;
 }
 
 int ConfigGraph::size() const { return static_cast<int>(vertices.size()); }

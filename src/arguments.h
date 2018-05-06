@@ -12,6 +12,7 @@ struct Arguments {
     -v\t\t\tdisplay all m-eternal dominating configurations/sets\n\
     -e\t\t\trun the bruteforce algorithm\n\
     -d\t\t\t display the domination number\n\
+    -h\t\t\t disable heuristics (will find all possible configurations)\
 \n\
   Input format:\n\
     The input file contains two numbers on every line, representing an edge.\n\
@@ -33,6 +34,7 @@ struct Arguments {
   bool displaySets = false;
   bool bruteforce = false;
   bool dominationNumber = false;
+  bool heuristics = true;
 };
 
 #endif

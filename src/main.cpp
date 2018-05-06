@@ -20,20 +20,13 @@ int main(int argc, const char* argv[]) {
       ConfigGraph *configGraph = nullptr;
       for (int i = 1; i <= g.size(); ++i) {
         delete configGraph;
-        configGraph = g.createConfigurationGraph(i, args.multipleGuards);
+        configGraph = g.createConfigurationGraph(i, args.multipleGuards, args.heuristics);
         if (configGraph->size() && !dn) {
           dn = i;
           if (!args.bruteforce) break;
         }
 
-        configGraph->reduceToSafe();
-        bool found = false;
-        for (int j = 0; j < configGraph->size(); ++j) {
-          // at least one unremoved after reducing
-          if (!configGraph->vertices[j].removed) {
-            found = true;
-          }
-        }
+        bool found = configGraph->reduceToSafe();
         if (found) {
           edn = i;
           break;

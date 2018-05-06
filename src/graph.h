@@ -36,7 +36,7 @@ struct Graph {
 
   // creates a configuration graph of all possible configurations of k guards on this graph.
   // Each vertice in the graph is one configuration
-  ConfigGraph* createConfigurationGraph(int k, bool multipleGuards);
+  ConfigGraph* createConfigurationGraph(int k, bool multipleGuards, bool heuristics);
 
   // is one configuration passable to other by the rules of eternal domination
   bool oneMoveDistance(const vector<int> & g, const vector<int> & h, int k);
@@ -65,9 +65,11 @@ struct ConfigGraph {
 
   void outputAllUnremoved();
 
-  void reduceToSafe();
+  bool reduceToSafe();
 
   int size() const;
+
+  bool isVertexSafe(int) const;
 
   ~ConfigGraph() {
     for (int i = 0; i < vertices.size(); ++i) {
