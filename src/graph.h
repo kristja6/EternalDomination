@@ -55,7 +55,6 @@ struct ConfigGraphVertex {
   // bitset of which vertices are safe
   vector<int>* guards;
   bool removed = false;
-
 };
 
 struct ConfigGraph {
@@ -69,7 +68,7 @@ struct ConfigGraph {
 
   int size() const;
 
-  bool isVertexSafe(int) const;
+  bool isVertexSafe(int, vector<bool> &) const;
 
   ~ConfigGraph() {
     for (int i = 0; i < vertices.size(); ++i) {
