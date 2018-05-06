@@ -19,6 +19,7 @@ int main(int argc, const char* argv[]) {
       int dn = 0;
       ConfigGraph *configGraph = nullptr;
       for (int i = 1; i <= g.size(); ++i) {
+        delete configGraph;
         configGraph = g.createConfigurationGraph(i, args.multipleGuards);
         if (configGraph->size() && !dn) {
           dn = i;

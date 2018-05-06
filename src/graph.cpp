@@ -6,10 +6,11 @@ void ConfigGraph::outputAllUnremoved() {
       cout << "-------" << endl;
       cout << "State " << i << ": " << endl;
       for (int edge : vertices[i].edges) {
+        if (!vertices[edge].removed)
         cout << edge << " ";
       }
       cout << endl;
-      for (int j = 0; j < size(); ++j) {
+      for (int j = 0; j < g->size(); ++j) {
         if ((*vertices[i].guards)[j])
           cout << j << ": " << (*vertices[i].guards)[j] << endl;
       }
@@ -35,10 +36,11 @@ void Graph::iterateCombinations(int index, int free, vector<vector<int>*> &resul
     (*newConfig)[index] = i;
     iterateCombinations(index + 1, free - i, result, newConfig, allowMultiple);
   }
+  delete curConfig;
 }
 
 bool Graph::oneMoveDistance(const vector<int> & g, const vector<int> & h, int k) {
-  Network net(size() + size() + 3);
+  Network net(2*size() + 3);
   const int source = 0, sink = 1;
   int offset = 2;
   // create edges for all vertices in G

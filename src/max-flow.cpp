@@ -11,12 +11,10 @@ void Network::addEdge(int from, int to, int capacity) { // 2 edges, back is resi
 bool Network::augementPath(int s, int t) { // source,sink
   for(int i = 0; i < vertices; ++ i) back[i] = -1;
   back[s] = -2;
-  for(int i = 0; i < vertices; ++ i) fromS[i] = false;
 
   stack<int> q; q.push(s);
   while (!q.empty() && back[t] == -1) { // exists augment path to sink
     int u = q.top(); q.pop();
-    fromS[u] = true;
     for (int i : ng[u]) {
       NetworkEdge & edge = edges[i];
       if (edge.cap && back[edge.to] == -1) { // has capacity
@@ -52,3 +50,4 @@ int Network::maxFlow(int s, int t) {
   }
   return maxFlow;
 }
+

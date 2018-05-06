@@ -15,9 +15,8 @@ struct Network {
   vector<NetworkEdge> edges;
   vector<vector<int>> ng; // indexes of edges
   vector<int> back; // indexes of edges for reconstructing augment path
-  vector<bool> fromS; // for minCut: can get from s when augment not found?
   int vertices;
-  Network(int n): vertices(n), ng(vector<vector<int>>(n)), back(vector<int>(n)), fromS(vector<bool>(n)) {
+  Network(int n): vertices(n), ng(vector<vector<int>>(n)), back(vector<int>(n)) {
   }
 
   void addEdge(int from, int to, int capacity);
