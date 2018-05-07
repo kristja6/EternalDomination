@@ -11,9 +11,9 @@ struct Arguments {
     -m\t\t\tallow multiple guards to stand on one vertex\n\
     -v\t\t\tdisplay all m-eternal dominating configurations/sets\n\
     -e\t\t\trun the bruteforce algorithm\n\
-    -d\t\t\t display the domination number\n\
-    -h\t\t\t disable heuristics (will find all possible configurations)\
-    -q\t\t\t hide progress output\
+    -d\t\t\tdisplay the domination number\n\
+    -h\t\t\tdisable heuristics (will find all possible configurations)\n\
+    -q\t\t\thide progress output\n\
 \n\
   Input format:\n\
     The input file contains two numbers on every line, representing an edge.\n\
