@@ -20,6 +20,14 @@ void ConfigGraph::outputAllUnremoved() {
 
 void Graph::iterateCombinations(int index, int free, vector<vector<int>*> &result, vector<int> *curConfig, bool allowMultiple) {
   if (index == curConfig->size()) {
+    if (outputProgress && free == 0) {
+      combinationsCounter ++;
+      if (combinationsCounter % 100000 == 0) {
+        cout << "k = " << currentMaxGuards << ". Creating vertices ("
+             << ((combinationsCounter * 100.0) / double(combinationsTotal)) << "%)     \r" << flush;
+      }
+    }
+
     if (free == 0 && isDominatingSet(*curConfig)) {
       result.push_back(curConfig);
     } else {
@@ -76,7 +84,14 @@ ConfigGraph *Graph::createConfigurationGraph(int k, bool multipleGuards, bool he
   vector<vector<int>*> allConfigs;
   // get all possible guard configurations
   vector<int>* initialConfig = new vector<int>(size(), 0);
-  cout << "k = " << k << ". Creating vertices           \r" << flush;
+
+  combinationsCounter = 0;
+  if (multipleGuards) {
+    combinationsTotal = NchooseK(vertices.size() + k - 1, k);
+  } else {
+    combinationsTotal = NchooseK(vertices.size(), k);
+  }
+  currentMaxGuards = k;
   iterateCombinations(0, k, allConfigs, initialConfig, multipleGuards);
 
   ConfigGraph *result = new ConfigGraph(this);
@@ -104,8 +119,8 @@ ConfigGraph *Graph::createConfigurationGraph(int k, bool multipleGuards, bool he
         result->vertices[i].edges.push_back(j);
         result->vertices[j].edges.push_back(i);
       }
-      if (timer % 1000 == 0) {
-        cout << "testing k = " << k << " (" << (timer*100.0)/total << "%)    \r";
+      if (outputProgress && timer % 1000 == 0) {
+        cout << "testing k = " << k << " (" << (timer*100.0)/total << "%)             \r";
       }
       timer ++;
       cnt ++;
@@ -280,4 +295,19 @@ void Graph::loadFromFile(const string &filename) {
     vertices[i.first].edges.push_back(i.second);
     vertices[i.second].edges.push_back(i.first);
   }
+}
+
+long long Graph::NchooseK(long long n, long long k) {
+  if (k == 0) return 1;
+  if (n < k) return 0;
+
+  if (k > n/2) return NchooseK(n, n-k);
+
+  long long out = 1;
+  for(int i = 1; i <= k; ++i) {
+    out *= n-i+1;
+    out /= i;
+  }
+
+  return out;
 }

@@ -11,8 +11,16 @@ int main(int argc, const char* argv[]) {
       return 1;
     }
 
-    Graph g;
+    Graph g(args.progressOutput);
     g.loadFromFile(args.inputFile);
+
+    BlockCutTree bc(&g);
+    if (bc.isCactus()) {
+      Cactus cactus(bc);
+      cout << "polynomial algorithm result:  " << cactus.EGC() << "       " << endl;
+    } else {
+      cout << "polynomial algorithm inapplicable" << endl;
+    }
     // find the smallest k for which there is a safe configuration
     if (args.bruteforce || args.dominationNumber) {
       int edn = -1;
@@ -38,20 +46,14 @@ int main(int argc, const char* argv[]) {
         configGraph->outputAllUnremoved();
 
       if (args.dominationNumber)
-        cout << "domination number = " << dn << endl;
+        cout << "domination number = " << dn << "       " << endl;
 
       if (args.bruteforce)
-        cout << "m-eternal domination number = " << edn << endl;
+        cout << "m-eternal domination number = " << edn << "       " << endl;
 
       delete configGraph;
     }
 
-    BlockCutTree bc(&g);
-    if (bc.isCactus()) {
-      Cactus cactus(bc);
-      cout << "cactus result:                " << cactus.EGC() << endl;
-
-    }
   } catch (const char* msg) {
     cout << "Error!" << endl;
     cout << msg << endl;

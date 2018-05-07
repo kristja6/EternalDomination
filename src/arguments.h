@@ -13,6 +13,7 @@ struct Arguments {
     -e\t\t\trun the bruteforce algorithm\n\
     -d\t\t\t display the domination number\n\
     -h\t\t\t disable heuristics (will find all possible configurations)\
+    -q\t\t\t hide progress output\
 \n\
   Input format:\n\
     The input file contains two numbers on every line, representing an edge.\n\
@@ -35,6 +36,7 @@ struct Arguments {
   bool bruteforce = false;
   bool dominationNumber = false;
   bool heuristics = true;
+  bool progressOutput = true;
 };
 
 #endif

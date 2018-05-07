@@ -25,14 +25,21 @@ struct GraphVertex {
 
 // represents one graph
 struct Graph {
+  Graph(bool outputProgress): outputProgress(outputProgress) {}
+
   vector<GraphVertex> vertices;
 
   // load undirected graph from stdin
   void loadFromFile(const string & filename);
 
+  long long NchooseK(long long n, long long k);
+
   // creates a list of graphs with all possible configurations of k guards
   // and keep only those, which are a dominating set
   void iterateCombinations(int index, int free, vector<vector<int>*> & result, vector<int>* curConfig, bool allowMultiple = true);
+  long long combinationsCounter;
+  long long combinationsTotal;
+  int currentMaxGuards;
 
   // creates a configuration graph of all possible configurations of k guards on this graph.
   // Each vertice in the graph is one configuration
@@ -45,6 +52,7 @@ struct Graph {
   bool isDominatingSet(const vector<int> & input);
 
   int size() const;
+  bool outputProgress;
 
 };
 
@@ -75,6 +83,7 @@ struct ConfigGraph {
       delete vertices[i].guards;
     }
   }
+
 };
 
 #endif //EDN_MAIN_H
