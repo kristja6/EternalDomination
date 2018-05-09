@@ -136,3 +136,13 @@ bool BlockCutTree::isCactus() {
   // also has to be connected
   return connected;
 }
+
+bool BlockCutTree::isCliqueTree() {
+  for (int i = 0; i < blockEdgeCounts.size(); ++i) {
+    if (blockEdgeCounts[i] != (blockVertexCounts[i]*(blockVertexCounts[i]-1))/2) {
+      return false;
+    }
+  }
+  // also has to be connected
+  return connected;
+}

@@ -44,6 +44,7 @@ struct BlockCutTree {
 
   // check if it is a cactus with every articulation in two blocks
   bool isCactus();
+  bool isCliqueTree();
 
   int size() const { return (int)vertices.size(); }
 };

@@ -2,6 +2,7 @@
 #include "arguments.h"
 #include "blockcuttree.h"
 #include "cactus.h"
+#include "cliqueTree.h"
 
 int main(int argc, const char* argv[]) {
   try {
@@ -15,12 +16,20 @@ int main(int argc, const char* argv[]) {
     g.loadFromFile(args.inputFile);
 
     BlockCutTree bc(&g);
+
+    CliqueTree cliqueTree(bc);
+    cout << cliqueTree.EDN() << endl;
+
     if (bc.isCactus()) {
       Cactus cactus(bc);
-      cout << "polynomial algorithm result:  " << cactus.EGC() << "       " << endl;
+      cout << "cactus alg. result: " << cactus.EGC() << "       " << endl;
+    } else if (bc.isCliqueTree()) {
+      CliqueTree cliqueTree(bc);
+      cout << "clique tree alg. result: " << cliqueTree.EDN() << "       " << endl;
     } else {
       cout << "polynomial algorithm inapplicable" << endl;
     }
+
     // find the smallest k for which there is a safe configuration
     if (args.bruteforce || args.dominationNumber) {
       int edn = -1;
@@ -41,15 +50,15 @@ int main(int argc, const char* argv[]) {
         }
       }
 
-      // output to file
       if (args.displaySets && configGraph != nullptr)
         configGraph->outputAllUnremoved();
 
       if (args.dominationNumber)
-        cout << "domination number = " << dn << "       " << endl;
+        cout << "domination number = " << dn << "              " << endl;
 
       if (args.bruteforce)
-        cout << "m-eternal domination number = " << edn << "       " << endl;
+        cout << edn << endl;
+        //cout << "m-eternal domination number = " << edn << "       " << endl;
 
       delete configGraph;
     }
