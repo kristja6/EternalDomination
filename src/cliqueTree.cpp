@@ -34,23 +34,10 @@ int CliqueTree::EDN() {
         break;
       }
     }
-    if (size[v] > 1) { // an undeleted clique
-      if (deg[v] == 0) { // an isolated Kn
-        edn ++;
-      } else { // a leaf clique
-        cliques[u] ++;
-      }
+    if (size[v] >= 1) { // an undeleted clique
+      Clique(edn, v, u);
     } else if (size[v] == -1) { // an articulation
-      if (cliques[v] == 1) {
-        size[u] --;
-        edn ++;
-      } else if (cliques[v] > 1) {
-        edn ++;
-      }
-    } else if (size[v] == 1) {
-      if (deg[v] == 0) { // an isolated vertex
-        edn ++;
-      }
+      Articulation(edn, v, u);
     }
     deleted[v] = true;
     if (deg[v] > 0) {
@@ -61,4 +48,29 @@ int CliqueTree::EDN() {
     }
   }
   return edn;
+}
+
+void CliqueTree::Clique(int &edn, int v, int u) {
+  if (size[v] > 1) { // an undeleted clique
+    if (deg[v] == 0) { // an isolated Kn
+      edn ++;
+    } else { // a leaf clique
+      cliques[u] ++;
+    }
+  } else if (size[v] == 1) {
+    if (deg[v] == 0) { // an isolated vertex
+      edn ++;
+    }
+  }
+}
+
+void CliqueTree::Articulation(int &edn, int v, int u) {
+  if (size[v] == -1) { // an articulation
+    if (cliques[v] == 1) {
+      size[u] --;
+      edn ++;
+    } else if (cliques[v] > 1) {
+      edn ++;
+    }
+  }
 }

@@ -17,6 +17,7 @@ bool Arguments::readArguments(int argc, const char **argv) {
           case 'd': dominationNumber = true; break;
           case 'h': heuristics = false; break;
           case 'q': progressOutput = false; break;
+          case 't': testingMode = true; break;
           default: return false;
         }
       }

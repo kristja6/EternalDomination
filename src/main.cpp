@@ -17,17 +17,16 @@ int main(int argc, const char* argv[]) {
 
     BlockCutTree bc(&g);
 
-    CliqueTree cliqueTree(bc);
-    cout << cliqueTree.EDN() << endl;
+    int resultCactus = -1;
+    int resultCliqueTree = -1;
 
     if (bc.isCactus()) {
       Cactus cactus(bc);
-      cout << "cactus alg. result: " << cactus.EGC() << "       " << endl;
-    } else if (bc.isCliqueTree()) {
+      cout << "cactus result: " << (resultCactus = cactus.EGC()) << "       " << endl;
+    }
+    if (bc.isCliqueTree()) {
       CliqueTree cliqueTree(bc);
-      cout << "clique tree alg. result: " << cliqueTree.EDN() << "       " << endl;
-    } else {
-      cout << "polynomial algorithm inapplicable" << endl;
+      cout << "clique tree result: " << (resultCliqueTree = cliqueTree.EDN()) << "       " << endl;
     }
 
     // find the smallest k for which there is a safe configuration
@@ -57,8 +56,16 @@ int main(int argc, const char* argv[]) {
         cout << "domination number = " << dn << "              " << endl;
 
       if (args.bruteforce)
-        cout << edn << endl;
-        //cout << "m-eternal domination number = " << edn << "       " << endl;
+        cout << "m-eternal domination number = " << edn << "       " << endl;
+
+      if (args.testingMode) {
+        if (resultCactus != -1 && edn != resultCactus) {
+          cout << "Error on cactus algorithm!" << endl;
+        }
+        if (resultCliqueTree != -1 && edn != resultCliqueTree) {
+          cout << "Error on clique tree algorithm!" << endl;
+        }
+      }
 
       delete configGraph;
     }

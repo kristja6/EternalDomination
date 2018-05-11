@@ -71,17 +71,8 @@ void Cactus::Block(int u, int v, int &g, stack<int> &st, bool &del) {
 }
 
 void Cactus::Articulation(int u, int v, int &g, stack<int> &st, bool &del) {
-  if (cliques[v] == 1 && size[u] >= 3) {
+  if (cliques[v] == 1) {
     size[u] --;
-    g ++;
-    del = true;
-  } else if (cliques[v] == 1 && size[u] == 2) {
-    size[u] --;
-    g ++;
-    del = true;
-  } else if (cliques[v] == 1 && size[u] == 1) {
-    del = true;
-  } else if (cliques[v] > 1) {
     g ++;
     del = true;
   } else if (cliques[v] == 0) {

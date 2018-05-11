@@ -16,6 +16,10 @@ struct CliqueTree {
 
   CliqueTree(const BlockCutTree & bc);
 
+  void Clique(int & edn, int v, int u);
+  void Articulation(int & edn, int v, int u);
+
+
   int EDN();
 };
 

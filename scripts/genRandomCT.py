@@ -1,6 +1,7 @@
 import random
 
-n = int(random.randrange(10, 60))
+# n = int(random.randrange(10, 60))
+n = 500
 
 v = 0
 

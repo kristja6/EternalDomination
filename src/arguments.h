@@ -37,6 +37,7 @@ struct Arguments {
   bool dominationNumber = false;
   bool heuristics = true;
   bool progressOutput = true;
+  bool testingMode = false;
 };
 
 #endif
