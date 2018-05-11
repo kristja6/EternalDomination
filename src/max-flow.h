@@ -10,7 +10,7 @@ struct NetworkEdge {
   int cap;
 };
 
-// Modified EdmondKarp from ACM codebook (source: Šimon Lomič)
+// Modified EdmondKarp from ACM codebook by the great coder Šimon Lomič
 class Network {
 public:
   Network(int n): vertices(n), ng(vector<vector<int>>(n)), back(vector<int>(n)) { }

@@ -6,10 +6,11 @@
 using namespace std;
 struct Arguments {
   const string helpText = "Usage: medn [OPTION] ... [FILE]\n\
+With no parameters, only the linear algorithm are tried\n\
 \n\
   Options:\n\
     -m\t\t\tallow multiple guards to stand on one vertex\n\
-    -v\t\t\tdisplay all m-eternal dominating configurations/sets\n\
+    -v\t\t\tdisplay all m-eternal dominating configurations\n\
     -e\t\t\trun the bruteforce algorithm\n\
     -d\t\t\tdisplay the domination number\n\
     -h\t\t\tdisable heuristics (will find all possible configurations)\n\

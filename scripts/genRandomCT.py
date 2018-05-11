@@ -1,14 +1,15 @@
 import random
 
 # n = int(random.randrange(10, 60))
-n = 500
+n = 1000000
 
 v = 0
 
 edges = []
 
 while n > 0:
-    x = v + random.randrange(1, 6)
+    s = random.randrange(1, 6)
+    x = v + s
 
     for i in range(v, x):
         for j in range(i + 1, x):
@@ -21,4 +22,4 @@ while n > 0:
             print(i, w)
 
     v = x
-    n -= x
+    n -= s

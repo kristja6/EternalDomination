@@ -1,7 +1,8 @@
 import random
 
 # n = int(random.randrange(10, 60))
-n = 80
+# n = int(random.randrange(10, 30))
+n = 1000000
 
 v = 0
 
@@ -9,7 +10,8 @@ art = set()
 edges = []
 
 while n > 0:
-    x = v + random.randrange(1, 15)
+    s = random.randrange(1, 10);
+    x = v + s
 
     for i in range(v, x - 1):
         print(i, i + 1)
@@ -28,4 +30,4 @@ while n > 0:
         print(v, x-1)
 
     v = x
-    n -= x
+    n -= s

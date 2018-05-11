@@ -46,6 +46,7 @@ BlockCutTree::BlockCutTree(Graph *in) : in(in) {
   }
 }
 
+// source: https://www.geeksforgeeks.org/biconnected-components/
 void BlockCutTree::MarkDfs() {
   int cnt = 0;
   for (int i = 0; i < inputVertices.size(); ++i) {
