@@ -282,6 +282,7 @@ int Graph::Size() const { return (int)(vertices.size()); }
 void Graph::LoadFromFile(const string &filename) {
   ifstream fileStream(filename);
   int n = -1;
+  fileStream >> n;
   auto edgesBuffer = set<pair<int,int>>();
   int tu, tv;
   while (fileStream >> tu >> tv) {
