@@ -10,7 +10,7 @@ void ConfigGraph::outputAllUnremoved() {
         cout << edge << " ";
       }
       cout << endl;
-      for (int j = 0; j < g->size(); ++j) {
+      for (int j = 0; j < g->Size(); ++j) {
         if ((*vertices[i].guards)[j])
           cout << j << ": " << (*vertices[i].guards)[j] << endl;
       }
@@ -18,7 +18,8 @@ void ConfigGraph::outputAllUnremoved() {
   }
 }
 
-void Graph::iterateCombinations(int index, int free, vector<vector<int>*> &result, vector<int> *curConfig, bool allowMultiple) {
+void Graph::IterateCombinations(int index, int free, vector<vector<int> *> &result, vector<int> *curConfig,
+                                bool allowMultiple) {
   if (index == curConfig->size()) {
     if (outputProgress && free == 0) {
       combinationsCounter ++;
@@ -28,7 +29,7 @@ void Graph::iterateCombinations(int index, int free, vector<vector<int>*> &resul
       }
     }
 
-    if (free == 0 && isDominatingSet(*curConfig)) {
+    if (free == 0 && IsDominatingSet(*curConfig)) {
       result.push_back(curConfig);
     } else {
       delete curConfig;
@@ -42,48 +43,48 @@ void Graph::iterateCombinations(int index, int free, vector<vector<int>*> &resul
   for (int i = 0; i <= maxGuards; ++ i) {
     vector<int>* newConfig = new vector<int>(*curConfig);
     (*newConfig)[index] = i;
-    iterateCombinations(index + 1, free - i, result, newConfig, allowMultiple);
+    IterateCombinations(index + 1, free - i, result, newConfig, allowMultiple);
   }
   delete curConfig;
 }
 
-bool Graph::oneMoveDistance(const vector<int> & g, const vector<int> & h, int k) {
-  Network net(2*size() + 3);
+bool Graph::OneMoveDistance(const vector<int> &g, const vector<int> &h, int k) {
+  Network net(2* Size() + 3);
   const int source = 0, sink = 1;
   int offset = 2;
   // create edges for all vertices in G
-  for (int i = 0; i < size(); ++ i) {
+  for (int i = 0; i < Size(); ++ i) {
     if (g[i]) {
-      net.addEdge(source, i + offset, g[i]);
+      net.AddEdge(source, i + offset, g[i]);
     }
   }
-  offset += size();
+  offset += Size();
   // create edges for all vertices in H
-  for (int i = 0; i < size(); ++ i) {
+  for (int i = 0; i < Size(); ++ i) {
     if (h[i]) {
-      net.addEdge(i + offset, sink, h[i]);
+      net.AddEdge(i + offset, sink, h[i]);
     }
   }
   // create edges between G and H
-  for (int i = 0; i < size(); ++ i) {
+  for (int i = 0; i < Size(); ++ i) {
     if (!g[i]) continue;
 
     // create edge to yourself
-    net.addEdge(i + 2, i + size() + 2, k + 1);
+    net.AddEdge(i + 2, i + Size() + 2, k + 1);
 
     for (int j = 0; j < vertices[i].edges.size(); ++j) {
       if (!h[ vertices[i].edges[j] ]) continue;
 
-      net.addEdge(i + 2, vertices[i].edges[j] + size() + 2, k + 1);
+      net.AddEdge(i + 2, vertices[i].edges[j] + Size() + 2, k + 1);
     }
   }
-  return net.maxFlow(source, sink) == k;
+  return net.MaxFlow(source, sink) == k;
 }
 
-ConfigGraph *Graph::createConfigurationGraph(int k, bool multipleGuards, bool heuristics) {
+ConfigGraph *Graph::CreateConfigurationGraph(int k, bool multipleGuards, bool heuristics) {
   vector<vector<int>*> allConfigs;
   // get all possible guard configurations
-  vector<int>* initialConfig = new vector<int>(size(), 0);
+  vector<int>* initialConfig = new vector<int>(Size(), 0);
 
   combinationsCounter = 0;
   if (multipleGuards) {
@@ -92,7 +93,7 @@ ConfigGraph *Graph::createConfigurationGraph(int k, bool multipleGuards, bool he
     combinationsTotal = NchooseK(vertices.size(), k);
   }
   currentMaxGuards = k;
-  iterateCombinations(0, k, allConfigs, initialConfig, multipleGuards);
+  IterateCombinations(0, k, allConfigs, initialConfig, multipleGuards);
 
   ConfigGraph *result = new ConfigGraph(this);
   for (auto &config : allConfigs) {
@@ -114,7 +115,7 @@ ConfigGraph *Graph::createConfigurationGraph(int k, bool multipleGuards, bool he
   // create edges between configurations
   for (int i = 0; i < result->size(); ++i) {
     for (int j = i + 1; j < result->size(); ++ j) {
-      if (oneMoveDistance(*(result->vertices[i].guards), *(result->vertices[j].guards), k)) {
+      if (OneMoveDistance(*(result->vertices[i].guards), *(result->vertices[j].guards), k)) {
         // the transition is always both ways
         result->vertices[i].edges.push_back(j);
         result->vertices[j].edges.push_back(i);
@@ -130,7 +131,7 @@ ConfigGraph *Graph::createConfigurationGraph(int k, bool multipleGuards, bool he
     if (heuristics && cnt >= limit) {
       cnt = 0;
       limit = (unsigned long long)(limit*1.25);
-      for (int l = 0; l < size(); ++l) {
+      for (int l = 0; l < Size(); ++l) {
         result->vertices[i].removed = false;
       }
       if (result->reduceToSafe()) {
@@ -149,7 +150,7 @@ bool ConfigGraph::isVertexSafe(int i, vector<bool> & removedVertices) const {
   //if (vertex.removed) return false;
   if (removedVertices[i]) return false;
 
-  vector<bool> safe(g->size(), false);
+  vector<bool> safe(g->Size(), false);
 
   for (int j = 0; j < g->vertices.size(); ++j) {
     if ((*vertex.guards)[j]) safe[j] = true;
@@ -161,7 +162,7 @@ bool ConfigGraph::isVertexSafe(int i, vector<bool> & removedVertices) const {
     if (removedVertices[neighbor]) continue;
 
     const vector<int> * config = vertices[neighbor].guards;
-    for (int l = 0; l < g->size(); ++l) {
+    for (int l = 0; l < g->Size(); ++l) {
       if ((*config)[l]) safe[l] = true;
     }
   }
@@ -194,7 +195,7 @@ bool ConfigGraph::reduceToSafe() {
 
     if (removedVertices[i]) continue;
 
-    vector<bool> safe(g->size(), false);
+    vector<bool> safe(g->Size(), false);
     for (int j = 0; j < g->vertices.size(); ++j) {
       if ((*vertex.guards)[j]) safe[j] = true;
     }
@@ -206,7 +207,7 @@ bool ConfigGraph::reduceToSafe() {
 
       //const Graph *config = vertices[neighbor].g;
       const vector<int> * config = vertices[neighbor].guards;
-      for (int l = 0; l < g->size(); ++l) {
+      for (int l = 0; l < g->Size(); ++l) {
         if ((*config)[l]) safe[l] = true;
       }
     }
@@ -260,9 +261,9 @@ bool ConfigGraph::reduceToSafe() {
 
 int ConfigGraph::size() const { return static_cast<int>(vertices.size()); }
 
-bool Graph::isDominatingSet(const vector<int> & guards) {
-  vector<bool> dominated(size(), false);
-  for (int i = 0; i < size(); ++i) {
+bool Graph::IsDominatingSet(const vector<int> &guards) {
+  vector<bool> dominated(Size(), false);
+  for (int i = 0; i < Size(); ++i) {
     if (guards[i]) {
       dominated[i] = true;
       for (int j = 0; j < vertices[i].edges.size(); ++j) {
@@ -270,15 +271,15 @@ bool Graph::isDominatingSet(const vector<int> & guards) {
       }
     }
   }
-  for (int i = 0; i < size(); ++i) {
+  for (int i = 0; i < Size(); ++i) {
     if (!dominated[i]) return false;
   }
   return true;
 }
 
-int Graph::size() const { return (int)(vertices.size()); }
+int Graph::Size() const { return (int)(vertices.size()); }
 
-void Graph::loadFromFile(const string &filename) {
+void Graph::LoadFromFile(const string &filename) {
   ifstream fileStream(filename);
   int n = -1;
   auto edgesBuffer = set<pair<int,int>>();

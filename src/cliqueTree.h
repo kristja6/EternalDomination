@@ -7,20 +7,20 @@
 
 #include "blockcuttree.h"
 
-struct CliqueTree {
+class CliqueTree {
+public:
+  CliqueTree(const BlockCutTree & bc);
+  int EDN();
+
+private:
+  void Clique(int & edn, int v, int u);
+  void Articulation(int & edn, int v, int u);
+
   const BlockCutTree & bc;
   vector<int> size;
   vector<int> deg;
   vector<int> cliques;
   vector<bool> deleted;
-
-  CliqueTree(const BlockCutTree & bc);
-
-  void Clique(int & edn, int v, int u);
-  void Articulation(int & edn, int v, int u);
-
-
-  int EDN();
 };
 
 

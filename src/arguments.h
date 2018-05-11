@@ -26,9 +26,9 @@ struct Arguments {
 ";
 
   // return true on success
-  bool readArguments(int argc, const char* argv[]);
+  bool ReadArguments(int argc, const char **argv);
 
-  void displayHelp();
+  void DisplayHelp();
 
   string inputFile;
   bool multipleGuards = false;

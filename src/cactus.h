@@ -8,16 +8,18 @@
 
 #include "blockcuttree.h"
 
-struct Cactus {
+class Cactus {
+public:
+  Cactus(const BlockCutTree & bc);
+  int EGC();
+
+private:
   const BlockCutTree & bc;
   vector<int> size;
   vector<int> deg;
   vector<int> cliques;
   vector<bool> deleted;
 
-  Cactus(const BlockCutTree & bc);
-
-  int EGC();
 
   void Block(int u, int v, int & g, stack<int> & st, bool & del);
 

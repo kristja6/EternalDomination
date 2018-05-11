@@ -10,20 +10,20 @@ struct NetworkEdge {
   int cap;
 };
 
-// Modified EdmondKarp from ACM codebook (source: Simon Lomic)
-struct Network {
+// Modified EdmondKarp from ACM codebook (source: Šimon Lomič)
+class Network {
+public:
+  Network(int n): vertices(n), ng(vector<vector<int>>(n)), back(vector<int>(n)) { }
+  void AddEdge(int from, int to, int capacity);
+  int MaxFlow(int s, int t);
+
+private:
   vector<NetworkEdge> edges;
   vector<vector<int>> ng; // indexes of edges
   vector<int> back; // indexes of edges for reconstructing augment path
   int vertices;
-  Network(int n): vertices(n), ng(vector<vector<int>>(n)), back(vector<int>(n)) {
-  }
 
-  void addEdge(int from, int to, int capacity);
-
-  bool augementPath(int s, int t);
-
-  int maxFlow(int s, int t);
+  bool AugementPath(int s, int t);
 };
 
 #endif

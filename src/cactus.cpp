@@ -5,15 +5,15 @@
 #include "cactus.h"
 
 Cactus::Cactus(const BlockCutTree &bc) :
-    bc(bc), size(vector<int>(bc.size())), deg(vector<int>(bc.size()))
-    , cliques(vector<int>(bc.size(), 0)), deleted(vector<bool>(bc.size(), false)) {
+    bc(bc), size(vector<int>(bc.Size())), deg(vector<int>(bc.Size()))
+    , cliques(vector<int>(bc.Size(), 0)), deleted(vector<bool>(bc.Size(), false)) {
   for (int i = 0; i < size.size(); ++i) {
     if (bc.vertices[i].block) {
       size[i] = bc.vertices[i].size;
     } else {
       size[i] = -1;
     }
-    deg[i] = bc.vertices[i].edges.size();
+    deg[i] = (int)bc.vertices[i].edges.size();
   }
 }
 

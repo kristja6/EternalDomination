@@ -6,7 +6,7 @@
 
 BlockCutTree::BlockCutTree(Graph *in) : in(in) {
   // copy the vertices of the input graph
-  for (int i = 0; i < in->size(); ++i) {
+  for (int i = 0; i < in->Size(); ++i) {
     inputVertices.push_back(InputGraphVertex());
     for (int j = 0; j < in->vertices[i].edges.size(); ++j) {
       inputVertices[i].edges.push_back(in->vertices[i].edges[j]);
@@ -17,7 +17,7 @@ BlockCutTree::BlockCutTree(Graph *in) : in(in) {
   blockVertexCounts = vector<int>(inputVertices.size(), 0);
 
   // mark every vertex with its blocks
-  markDfs();
+  MarkDfs();
 
   // add all blocks into the block-cut tree
   // the first n blocks are ordered by their ids
@@ -42,17 +42,17 @@ BlockCutTree::BlockCutTree(Graph *in) : in(in) {
 
   // in the case the graph is 2-connected and no articulations were found
   if (vertices.empty()) {
-    vertices.push_back(BlockCutTreeVertex(true, in->size()));
+    vertices.push_back(BlockCutTreeVertex(true, in->Size()));
   }
 }
 
-void BlockCutTree::markDfs() {
+void BlockCutTree::MarkDfs() {
   int cnt = 0;
   for (int i = 0; i < inputVertices.size(); ++i) {
     if (inputVertices[i].time == -1) {
       cnt ++;
       vector<pair<int,int>> edgesSt;
-      markDfsHelp(i, edgesSt);
+      MarkDfsHelp(i, edgesSt);
 
       int j = 0;
       unordered_set<int> edgeVertices;
@@ -75,7 +75,7 @@ void BlockCutTree::markDfs() {
   connected = (cnt == 1);
 }
 
-void BlockCutTree::markDfsHelp(int u, vector<pair<int, int>> &edgesSt) {
+void BlockCutTree::MarkDfsHelp(int u, vector<pair<int, int>> &edgesSt) {
   time ++;
   inputVertices[u].time = time;
   inputVertices[u].low = time;
@@ -89,7 +89,7 @@ void BlockCutTree::markDfsHelp(int u, vector<pair<int, int>> &edgesSt) {
       children ++;
       inputVertices[v].parent = u;
       edgesSt.push_back({u, v});
-      markDfsHelp(v, edgesSt);
+      MarkDfsHelp(v, edgesSt);
       inputVertices[u].low = min(inputVertices[u].low, inputVertices[v].low);
 
       // If u is an articulation, pop all edges from stack till (u, v)
@@ -121,7 +121,7 @@ void BlockCutTree::markDfsHelp(int u, vector<pair<int, int>> &edgesSt) {
   }
 }
 
-bool BlockCutTree::isCactus() {
+bool BlockCutTree::IsCactus() {
   for (int i = 0; i < vertices.size(); ++i) {
     if (!vertices[i].block && vertices[i].edges.size() > 2) return false;
   }
@@ -137,7 +137,7 @@ bool BlockCutTree::isCactus() {
   return connected;
 }
 
-bool BlockCutTree::isCliqueTree() {
+bool BlockCutTree::IsCliqueTree() {
   for (int i = 0; i < blockEdgeCounts.size(); ++i) {
     if (blockEdgeCounts[i] != (blockVertexCounts[i]*(blockVertexCounts[i]-1))/2) {
       return false;

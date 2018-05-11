@@ -1,10 +1,10 @@
 #include "arguments.h"
 
-void Arguments::displayHelp() {
+void Arguments::DisplayHelp() {
   cout << helpText << endl;
 }
 
-bool Arguments::readArguments(int argc, const char **argv) {
+bool Arguments::ReadArguments(int argc, const char **argv) {
   if (argc <= 1) return false;
   for (int i = 1; i < argc; ++i) {
     if (argv[i][0] == '-') { // a switch argument

@@ -7,24 +7,24 @@
 int main(int argc, const char* argv[]) {
   try {
     Arguments args;
-    if (!args.readArguments(argc, argv)) {
-      args.displayHelp();
+    if (!args.ReadArguments(argc, argv)) {
+      args.DisplayHelp();
       return 1;
     }
 
     Graph g(args.progressOutput);
-    g.loadFromFile(args.inputFile);
+    g.LoadFromFile(args.inputFile);
 
     BlockCutTree bc(&g);
 
     int resultCactus = -1;
     int resultCliqueTree = -1;
 
-    if (bc.isCactus()) {
+    if (bc.IsCactus()) {
       Cactus cactus(bc);
       cout << "cactus result: " << (resultCactus = cactus.EGC()) << "       " << endl;
     }
-    if (bc.isCliqueTree()) {
+    if (bc.IsCliqueTree()) {
       CliqueTree cliqueTree(bc);
       cout << "clique tree result: " << (resultCliqueTree = cliqueTree.EDN()) << "       " << endl;
     }
@@ -34,9 +34,9 @@ int main(int argc, const char* argv[]) {
       int edn = -1;
       int dn = 0;
       ConfigGraph *configGraph = nullptr;
-      for (int i = 1; i <= g.size(); ++i) {
+      for (int i = 1; i <= g.Size(); ++i) {
         delete configGraph;
-        configGraph = g.createConfigurationGraph(i, args.multipleGuards, args.heuristics);
+        configGraph = g.CreateConfigurationGraph(i, args.multipleGuards, args.heuristics);
         if (configGraph->size() && !dn) {
           dn = i;
           if (!args.bruteforce) break;

@@ -24,36 +24,36 @@ struct GraphVertex {
 };
 
 // represents one graph
-struct Graph {
+class Graph {
+public:
   Graph(bool outputProgress): outputProgress(outputProgress) {}
+  void LoadFromFile(const string &filename);
+  int Size() const;
+  ConfigGraph* CreateConfigurationGraph(int k, bool multipleGuards, bool heuristics);
 
   vector<GraphVertex> vertices;
-
-  // load undirected graph from stdin
-  void loadFromFile(const string & filename);
+private:
 
   long long NchooseK(long long n, long long k);
 
   // creates a list of graphs with all possible configurations of k guards
   // and keep only those, which are a dominating set
-  void iterateCombinations(int index, int free, vector<vector<int>*> & result, vector<int>* curConfig, bool allowMultiple = true);
+  void IterateCombinations(int index, int free, vector<vector<int> *> &result, vector<int> *curConfig,
+                           bool allowMultiple = true);
   long long combinationsCounter;
   long long combinationsTotal;
   int currentMaxGuards;
 
   // creates a configuration graph of all possible configurations of k guards on this graph.
   // Each vertice in the graph is one configuration
-  ConfigGraph* createConfigurationGraph(int k, bool multipleGuards, bool heuristics);
 
   // is one configuration passable to other by the rules of eternal domination
-  bool oneMoveDistance(const vector<int> & g, const vector<int> & h, int k);
+  bool OneMoveDistance(const vector<int> &g, const vector<int> &h, int k);
 
   // check whether the current configuration of guards induces a dominating set
-  bool isDominatingSet(const vector<int> & input);
+  bool IsDominatingSet(const vector<int> &input);
 
-  int size() const;
   bool outputProgress;
-
 };
 
 struct ConfigGraphVertex {

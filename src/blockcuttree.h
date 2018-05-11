@@ -21,32 +21,33 @@ struct BlockCutTreeVertex {
   BlockCutTreeVertex(bool block, int size) : block(block), size(size) {}
 
   bool block; // is either a block or an articulation
-  int size; // size of the block
+  int size; // Size of the block
   vector<int> edges;
 };
 
-struct BlockCutTree {
+class BlockCutTree {
+public:
+  BlockCutTree(Graph* in);
+  // check if it is a cactus with every articulation in two blocks
+  bool IsCactus();
+  bool IsCliqueTree();
+  int Size() const { return (int)vertices.size(); }
+
   vector<InputGraphVertex> inputVertices;
   vector<BlockCutTreeVertex> vertices;
   vector<int> blockVertexCounts;
   vector<int> blockEdgeCounts;
+
+private:
   bool connected = false;
   Graph* in = nullptr;
-
-  BlockCutTree(Graph* in);
 
   int time = 0;
   int curCliqueId = 0;
 
   // source: https://www.geeksforgeeks.org/biconnected-components/
-  void markDfs();
-  void markDfsHelp(int u, vector<pair<int,int>> & edgesSt);
-
-  // check if it is a cactus with every articulation in two blocks
-  bool isCactus();
-  bool isCliqueTree();
-
-  int size() const { return (int)vertices.size(); }
+  void MarkDfs();
+  void MarkDfsHelp(int u, vector<pair<int, int>> &edgesSt);
 };
 
 #endif //EDN_BLOCKCUTTREE_H
