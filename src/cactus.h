@@ -20,11 +20,8 @@ private:
   vector<int> cliques;
   vector<bool> deleted;
 
-
   void Block(int u, int v, int & g, stack<int> & st, bool & del);
-
   void LeafCycle(int v, int & g, stack<int> & st, bool & del);
-
   void Articulation(int u, int v, int & g, stack<int> & st, bool & del);
 };
 

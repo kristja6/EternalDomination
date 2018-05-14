@@ -23,12 +23,13 @@ struct GraphVertex {
   vector<int> edges;
 };
 
-// represents one graph
 class Graph {
 public:
   Graph(bool outputProgress): outputProgress(outputProgress) {}
   void LoadFromFile(const string &filename);
   int Size() const;
+  // creates a configuration graph of all possible configurations of k guards on this graph.
+  // Each vertice in the graph is one configuration
   ConfigGraph* CreateConfigurationGraph(int k, bool multipleGuards, bool heuristics);
 
   vector<GraphVertex> vertices;
@@ -44,12 +45,9 @@ private:
   long long combinationsTotal;
   int currentMaxGuards;
 
-  // creates a configuration graph of all possible configurations of k guards on this graph.
-  // Each vertice in the graph is one configuration
 
   // is one configuration passable to other by the rules of eternal domination
   bool OneMoveDistance(const vector<int> &g, const vector<int> &h, int k);
-
   // check whether the current configuration of guards induces a dominating set
   bool IsDominatingSet(const vector<int> &input);
 
@@ -61,7 +59,7 @@ struct ConfigGraphVertex {
   ConfigGraphVertex(vector<int> * g): guards(g) {};
   vector<int> edges;
   // bitset of which vertices are safe
-  vector<int>* guards;
+  vector<int>* guards = nullptr;
   bool removed = false;
 };
 
@@ -71,19 +69,10 @@ struct ConfigGraph {
   Graph* g;
 
   void outputAllUnremoved();
-
   bool reduceToSafe();
-
   int size() const;
-
   bool isVertexSafe(int, vector<bool> &) const;
-
-  ~ConfigGraph() {
-    for (int i = 0; i < vertices.size(); ++i) {
-      delete vertices[i].guards;
-    }
-  }
-
+  ~ConfigGraph();
 };
 
 #endif //EDN_MAIN_H

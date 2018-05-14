@@ -26,10 +26,10 @@ bool Network::AugementPath(int s, int t) { // source,sink
   return back[t] != -1;
 }
 
-int Network::MaxFlow(int s, int t) {
+int Network::MaxFlow(int start, int target) {
   int maxFlow = 0;
-  while (AugementPath(s, t)) {
-    int flow = 1<<30, node = t; // from sink to source(=-2)
+  while (AugementPath(start, target)) {
+    int flow = 1<<30, node = target; // from sink to source(=-2)
     // find size of the flow = min capacity on the way:
     while (back[node] != -2) {
       NetworkEdge & edge = edges[back[node]];
@@ -37,7 +37,7 @@ int Network::MaxFlow(int s, int t) {
       node = edge.from;
     }
     // push the flow:
-    node=t;
+    node=target;
     while (back[node] != -2) {
       NetworkEdge & edge = edges[back[node]],
           & edge2 = edges[back[node]^1];

@@ -28,7 +28,6 @@ struct Arguments {
 
   // return true on success
   bool ReadArguments(int argc, const char **argv);
-
   void DisplayHelp();
 
   string inputFile;

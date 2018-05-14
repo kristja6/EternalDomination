@@ -183,11 +183,9 @@ bool ConfigGraph::isVertexSafe(int i, vector<bool> & removedVertices) const {
 }
 
 bool ConfigGraph::reduceToSafe() {
-  bool removedAny;
   vector<bool> removedVertices(size(), false);
   queue<int> unsafe;
 
-  removedAny = false;
   // clear information on which vertices are safe (meaning they can defend against any attack)
 
   for (int i = 0; i < size(); ++ i) {
@@ -222,7 +220,6 @@ bool ConfigGraph::reduceToSafe() {
     if (isUnsafe) {
       //vertex.removed = true;
       removedVertices[i] = true;
-      removedAny = true;
       unsafe.push(i);
     }
   }
@@ -260,6 +257,12 @@ bool ConfigGraph::reduceToSafe() {
 }
 
 int ConfigGraph::size() const { return static_cast<int>(vertices.size()); }
+
+ConfigGraph::~ConfigGraph() {
+  for (int i = 0; i < vertices.size(); ++i) {
+    delete vertices[i].guards;
+  }
+}
 
 bool Graph::IsDominatingSet(const vector<int> &guards) {
   vector<bool> dominated(Size(), false);

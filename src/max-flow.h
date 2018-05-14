@@ -15,7 +15,7 @@ class Network {
 public:
   Network(int n): vertices(n), ng(vector<vector<int>>(n)), back(vector<int>(n)) { }
   void AddEdge(int from, int to, int capacity);
-  int MaxFlow(int s, int t);
+  int MaxFlow(int start, int target);
 
 private:
   vector<NetworkEdge> edges;
