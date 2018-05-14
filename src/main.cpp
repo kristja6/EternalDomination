@@ -19,14 +19,22 @@ int main(int argc, const char* argv[]) {
 
     int resultCactus = -1;
     int resultCliqueTree = -1;
+    bool foundResult = args.bruteforce;
 
     if (bc.IsCactus()) {
       Cactus cactus(bc);
       cout << "cactus result: " << (resultCactus = cactus.EGC()) << "       " << endl;
+      foundResult = true;
     }
     if (bc.IsCliqueTree()) {
       CliqueTree cliqueTree(bc);
       cout << "clique tree result: " << (resultCliqueTree = cliqueTree.EDN()) << "       " << endl;
+      foundResult = true;
+    }
+
+    if (!foundResult) {
+      cout << "no polynomial algorithm applicable." << endl;
+      cout << "run with -e to apply brute-force" << endl;
     }
 
     // find the smallest k for which there is a safe configuration
