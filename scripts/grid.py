@@ -1,4 +1,4 @@
-n = 6
+n = 2
 for i in range(n):
     for j in range(n):
         for x in range(-1, 2):

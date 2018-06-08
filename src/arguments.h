@@ -14,6 +14,8 @@ struct Arguments {
     -d\t\t\tdisplay the domination number\n\
     -h\t\t\tdisable heuristics (will find all possible configurations)\n\
     -q\t\t\thide progress output\n\
+    -q\t\t\toutput config graph\n\
+    -s\t\t\toutput the size of the minimal configuration graph\n\
 \n\
   Input format:\n\
     The first line contains the number of vertices in the graph\n\
@@ -38,6 +40,8 @@ struct Arguments {
   bool heuristics = true;
   bool progressOutput = true;
   bool testingMode = false;
+  bool outputConfigGraph = false;
+  bool minConfigSize = false;
 };
 
 #endif

@@ -69,10 +69,16 @@ struct ConfigGraph {
   Graph* g;
 
   void outputAllUnremoved();
-  bool reduceToSafe();
+  bool reduceToSafe(bool setRemoved);
+  bool reduceToSafe(vector<bool>, bool setRemoved);
   int size() const;
   bool isVertexSafe(int, vector<bool> &) const;
   ~ConfigGraph();
+  void OutputToFile(int, vector<bool>, bool);
+  void OutputToFile();
+
+  int GetMinimalStrategy();
+  void getAllSubsetsOfSize(int k, int idx, vector<bool> cur, vector<vector<bool>> &res);
 };
 
 #endif //EDN_MAIN_H

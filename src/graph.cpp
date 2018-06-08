@@ -134,7 +134,7 @@ ConfigGraph *Graph::CreateConfigurationGraph(int k, bool multipleGuards, bool he
       for (int l = 0; l < Size(); ++l) {
         result->vertices[i].removed = false;
       }
-      if (result->reduceToSafe()) {
+      if (result->reduceToSafe(false)) {
         return result;
       }
     }
@@ -182,9 +182,17 @@ bool ConfigGraph::isVertexSafe(int i, vector<bool> & removedVertices) const {
   return true;
 }
 
-bool ConfigGraph::reduceToSafe() {
+bool ConfigGraph::reduceToSafe(bool setRemoved = true) {
+  vector<bool> enableAll(size(), true);
+  return reduceToSafe(enableAll, setRemoved);
+}
+
+bool ConfigGraph::reduceToSafe(vector<bool> enabled, bool setRemoved) {
   vector<bool> removedVertices(size(), false);
   queue<int> unsafe;
+  for (int i = 0; i < enabled.size(); ++i) {
+    if (!enabled[i]) removedVertices[i] = true;
+  }
 
   // clear information on which vertices are safe (meaning they can defend against any attack)
 
@@ -246,8 +254,9 @@ bool ConfigGraph::reduceToSafe() {
 
   // check if it is non-empty
   bool isSafe = false;
+  // remove all vertices that are actually not safe
   for (int j = 0; j < size(); ++j) {
-    vertices[j].removed = removedVertices[j];
+    if (setRemoved) vertices[j].removed = removedVertices[j];
     // at least one unremoved after reducing
     if (!removedVertices[j]) {
       isSafe = true;
@@ -262,6 +271,102 @@ ConfigGraph::~ConfigGraph() {
   for (int i = 0; i < vertices.size(); ++i) {
     delete vertices[i].guards;
   }
+}
+
+int ConfigGraph::GetMinimalStrategy() {
+  int cnt = 0;
+  bool isSafeNow = false;
+  for (int i = 1; i <= size(); ++i) {
+    cout << "(" << size() << ") testing strategy size: " << i << "        \r" << flush;
+    vector<bool> enabled(size(), false);
+    vector<vector<bool>> sets;
+    getAllSubsetsOfSize(i, 0, enabled, sets);
+
+    for (int j = 0; j < sets.size(); ++j) {
+      if (reduceToSafe(sets[j], false)) {
+        isSafeNow = true;
+        cnt ++;
+        OutputToFile(cnt, sets[j], false);
+        OutputToFile(cnt, sets[j], true);
+      }
+    }
+    if (isSafeNow) return i;
+  }
+  return -1;
+}
+
+void ConfigGraph::getAllSubsetsOfSize(int k, int idx, vector<bool> cur, vector<vector<bool>> &res) {
+  if (k == 0) {
+    res.push_back(cur);
+    return;
+  }
+  if (idx == size()) return;
+
+  if (!vertices[idx].removed) {
+    vector<bool> cp1 = cur;
+    cp1[idx] = true;
+    getAllSubsetsOfSize(k - 1, idx + 1, cp1, res);
+  }
+  getAllSubsetsOfSize(k, idx + 1, cur, res);
+}
+
+void ConfigGraph::OutputToFile(int n, vector<bool> enabled, bool compressIndexes = false) {
+  string name = "configGraphs/configGraph" + to_string(n);
+  if (compressIndexes) name = name + "_cmp_";
+  name = name + ".in";
+  ofstream output(name);
+  int edges = 0;
+  int v = 0;
+  for (int i = 0; i < size(); ++i) {
+    if (vertices[i].removed || !enabled[i]) continue;
+    for (int j = 0; j < vertices[i].edges.size(); ++j) {
+      if (i > vertices[i].edges[j]) continue;
+      if (!vertices[ vertices[i].edges[j] ].removed && enabled[ vertices[i].edges[j] ]) {
+        edges++;
+        v = max(v, i);
+        v = max(v, vertices[i].edges[j]);
+      }
+    }
+  }
+  v ++;
+  vector<pair<int,int>> out;
+
+  for (int i = 0; i < size(); ++i) {
+    if (vertices[i].removed || !enabled[i]) continue;
+    for (int j = 0; j < vertices[i].edges.size(); ++j) {
+      if (i > vertices[i].edges[j]) continue;
+      if (!vertices[ vertices[i].edges[j] ].removed && enabled[ vertices[i].edges[j] ])
+        out.push_back({i, vertices[i].edges[j]});
+    }
+  }
+  if (compressIndexes) {
+    map<int,int> mapping;
+    v = 0;
+    int cur = 0;
+    for (int i = 0; i < out.size(); ++i) {
+      if (mapping.find(out[i].first) == mapping.end()) {
+        mapping[out[i].first] = (cur ++);
+      }
+      if (mapping.find(out[i].second) == mapping.end()) {
+        mapping[out[i].second] = (cur ++);
+      }
+
+      out[i].first = mapping[out[i].first];
+      out[i].second = mapping[out[i].second];
+      v = max(out[i].first + 1, max(out[i].second + 1, v));
+    }
+  }
+
+  output << v << " " << edges << endl;
+
+  for (int i = 0; i < out.size(); ++i) {
+    output << out[i].first << " " << out[i].second << endl;
+  }
+}
+
+void ConfigGraph::OutputToFile() {
+  vector<bool> enableAll(size(), true);
+  OutputToFile(0, enableAll, false);
 }
 
 bool Graph::IsDominatingSet(const vector<int> &guards) {

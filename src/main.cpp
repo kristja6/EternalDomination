@@ -50,9 +50,15 @@ int main(int argc, const char* argv[]) {
           if (!args.bruteforce) break;
         }
 
-        bool found = configGraph->reduceToSafe();
+        bool found = configGraph->reduceToSafe(true);
         if (found) {
           edn = i;
+          if (args.outputConfigGraph)
+            configGraph->OutputToFile();
+
+          if (args.minConfigSize) {
+            cout << "minimal strategy size: " << configGraph->GetMinimalStrategy() << "        " << endl;
+          }
           break;
         }
       }

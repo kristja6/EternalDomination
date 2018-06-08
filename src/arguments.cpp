@@ -18,6 +18,8 @@ bool Arguments::ReadArguments(int argc, const char **argv) {
           case 'h': heuristics = false; break;
           case 'q': progressOutput = false; break;
           case 't': testingMode = true; break;
+          case 'c': outputConfigGraph = true; break;
+          case 's': minConfigSize = true; break;
           default: return false;
         }
       }
